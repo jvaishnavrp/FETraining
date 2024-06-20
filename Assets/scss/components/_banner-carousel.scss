@@ -1,0 +1,141 @@
+.banner-carousel {
+    clip-path: ellipse(98% 88% at 50% 10%);
+    width: 100%;
+
+    &__image {
+        align-items: center;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        min-height: 400px;
+        position: relative;
+        width: 100%;
+
+        @include min-screen(sm) {
+            min-height: 686px;
+        }
+
+        @include min-screen(md) {
+            justify-content: flex-start;
+        }
+
+        @include min-screen(lg) {
+            min-height: 100vh;
+        }
+    }
+
+    &__text {
+        @extend .small-container;       
+        display: flex;
+        font-family: $bodoni;
+        flex-direction: column;       
+
+        &-title {
+            color: $white;
+            font-family: $bodoni;
+            font-size: 2.25rem;
+            line-height: 1.2;
+            margin-bottom: 8px;
+
+            @include min-screen(md) {
+                font-size: 62px;
+                line-height: 68px;
+            }
+        }
+
+        &-subtitle {
+            align-items: flex-end;
+            color: $electric-violet;
+            display: flex;
+            font-size: 2.25rem;
+            line-height: 1.2;
+            line-height: 58px;
+
+            @include min-screen(md) {
+                font-size: 62px;
+                line-height: 68px;
+                justify-content: flex-end;
+            }
+        }
+
+        @include max-screen(lg) {
+            align-items: center;
+            justify-content: center;
+        }
+        &[data-text-align="center"]{
+            align-items: center;
+            justify-content: center;
+        }
+        &[data-text-align="right"]{
+            @include min-screen(lg){
+            align-items: flex-end;
+            justify-content: flex-end;
+            max-width: 958px;
+            margin: auto;
+            }
+        }
+    }
+
+    &__link {
+        bottom: 17px;
+        border: 2px solid $white;
+        border-radius: 40px;
+        color: $white;
+        font-family: $openSans;
+        font-size: 16px;
+        line-height: 18px;
+        left: 50%;
+        padding: 32px 15px 28px;
+        position: absolute;
+        text-align: center;
+        text-decoration: none;
+        transform: translateX(-50%);
+        transition: background-color 0.3s, color 0.3s ease-in-out;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: $white;
+            color: $paint-chip;
+        }
+
+        &:focus {
+            background-color: $very-light-red;
+            color: $paint-chip;
+        }
+
+        @include min-screen(sm) {
+            bottom: 30px;
+        }
+
+        @include min-screen(lg) {
+            bottom: 75px;
+            font-size: 19px;
+            line-height: 23px;
+            padding: 32px 32px 28px;
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+
+        &-left,
+        &-right {
+            background-size: cover;
+            height: 58px;
+        }
+
+        &:focus {
+
+            .banner-carousel__button-left,
+            .banner-carousel__button-right {
+                outline: 2px dotted $white;
+            }
+        }
+    }
+
+    @include min-screen(lg) {
+        clip-path: ellipse(98% 88% at 50% 10%);
+    }
+}
