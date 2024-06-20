@@ -1,1 +1,145 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="introduction to web accessibility">
+    <title>Web Accessibility</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="#main" class="header__skip" title="Skip to main content"
+                aria-label="click on it to Skip to main content">Skip to main content</a>
+            <ul class="header__nav-list">
+                <li class="header__nav-list-item">
+                    <a href="#" class="header__nav-list-item-link" title="home">Home</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a href="#" class="header__nav-list-item-link" title="News">News</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a href="#" class="header__nav-list-item-link" title="About">About</a>
+                </li>
+                <li class="header__nav-list-item header__nav-list-item-dropdown" data-infodropdownisopen="false">
+                    <button class="header__nav-list-item-link header__nav-list-item-button" title="Dropdown"
+                        aria-controls="header-dropdown-list">Dropdown <i class="fa fa-caret-down"></i></button>
+                    <ul class="header__nav-list-item-dropdown-content" id="header-dropdown-list">
+                        <li class="header__nav-list-item-dropdown-content-list">
+                            <a href="#" class="header__nav-list-item-dropdown-content-list-link" title="Link 1">Link
+                                1</a></li>
+                        <li class="header__nav-list-item-dropdown-content-list"> <a href="#"
+                                class="header__nav-list-item-dropdown-content-list-link" title="Link 2">Link 2</a>
+                        </li>
+                        <li class="header__nav-list-item-dropdown-content-list"> <a href="#"
+                                class="header__nav-list-item-dropdown-content-list-link" title="Link 3">Link 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav-list-item">
+                    <a href="#" class="header__nav-list-item-link" title="contact">Contact</a>
+                </li>
+            </ul>
+            <button class="header__hamburger-button">&#9776</button>
+        </nav>
+    </header>
+    <main id="main">
+        
+        <img src="https://source.unsplash.com/random/1200x860" class="banner-image" alt="banner image" loading="lazy" />
+        <div class="accordian">
+            <div class="container">
+                <h1>A accordian component</h1>
+                <section class="accordion__item">
+                    <h2 class="accordion__heading"><button class="accordion__trigger" aria-expanded="false"
+                            aria-controls="collapse-1" aria-label="collapse this section">The Modern Piano
+                            Accordion</button></h2>
+                    <div id="collapse-1" class="accordion__copy" aria-hidden="true"><img
+                            src="https://assets.codepen.io/358203/accordion.png" alt="piano accordion"
+                            class="accordion__copy__pic">The typical accordion we see today uses
+                        piano-style keys played by the right hand. The left hand has access to a set of buttons that
+                        play bass notes and preset chords.
+                        This is the style of accordion that became popularized on the <a
+                            href="https://en.wikipedia.org/wiki/The_Lawrence_Welk_Show" target="_blank">Lawrence Welk
+                            show</a> and is used in many European music traditions. </div>
+                </section>
+                <section class="accordion__item">
+                    <h2 class="accordion__heading"><button class="accordion__trigger" aria-expanded="false"
+                            aria-controls="collapse-2" aria-label="collapse this section">Button Accordions</button>
+                    </h2>
+                    <div id="collapse-2" class="accordion__copy" aria-hidden="false"><img
+                            src="https://assets.codepen.io/358203/squeezebox.png" alt="button accordion"
+                            class="accordion__copy__pic">Older types of accordions used small
+                        buttons to play pitches with the right hand. Some of these instruments were diatonic rather than
+                        chromatic. Some used a bisonic system that played a different note depending on the direction of
+                        the bellows. There is an endless variety of these "squeezebox"-type instruments in many
+                        traditions world-wide.</div>
+                </section>
+                <section class="accordion__item">
+                    <h2 class="accordion__heading"><button class="accordion__trigger" aria-controls="collapse-3"
+                            aria-expanded="false" aria-label="collapse this section">Sound Production</button></h2>
+                    <div class="accordion__copy" id="collapse-3" aria-hidden="true">Accordions produce sound using air.
+                        The player compresses and expands
+                        the bellows to force air through pallets that cause little reeds to vibrate. The player presses
+                        a button or key to determine which pitch will sound. This is the same sound production method
+                        commonly used in the old reed organs popular in churches in the old west.</div>
+                </section>
+
+            </div>
+        </div>
+        <div class="tab-section">
+            <div class="container">
+                <h2 class="tab-heading">Tab component</h2>
+                <div class="tabs">
+                    <div role="tablist" class="tab-section__list" aria-label="Sample Tabs">
+                        <button role="tab" class="tab-section__button" aria-selected="true" aria-controls="panel-1"
+                            id="tab-1" tabindex="0" aria-label="First Tab">
+                            First Tab
+                        </button>
+                        <button role="tab" class="tab-section__button" aria-selected="false" aria-controls="panel-2"
+                            id="tab-2" tabindex="-1" aria-label="Second Tab">
+                            Second Tab
+                        </button>
+                        <button role="tab" class="tab-section__button" aria-selected="false" aria-controls="panel-3"
+                            id="tab-3" tabindex="-1" aria-label="Third Tab">
+                            Third Tab
+                        </button>
+                    </div>
+                    <div id="panel-1" class="tab-section__panel" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+                        <p>Content for the first panel</p>
+                    </div>
+                    <div id="panel-2" class="tab-section__panel" role="tabpanel" tabindex="0" aria-labelledby="tab-2"
+                        hidden>
+                        <p>Content for the second panel</p>
+                    </div>
+                    <div id="panel-3" class="tab-section__panel" role="tabpanel" tabindex="0" aria-labelledby="tab-3"
+                        hidden>
+                        <p>Content for the third panel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="modal">
+            <div class="container">
+            <h2 class="modal-heading">Modal Component</h2>
+            <button class="modal-button" aria-label="click on this button to lauch the modal"
+                aria-controls="modal-c">Launch Modal</button>
+            <div class="modal__content" id="modal-c" aria-hidden="true">
+                <div class="modal__dialog" role="dialog">
+                    <button class="modal__close" aria-label="click on it to close the modal"></button>
+                    <div class="modal__text">
+                        This is modal
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <script src="./script/main.min.js"></script>
+</body>
+
+</html>
