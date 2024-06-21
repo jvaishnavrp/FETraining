@@ -34,8 +34,8 @@
 ## Icons
 * For icons font awesome 5.15.4 has been used here.
 
-## Dist folder ##
-* Compile css will go here dist/css/style.min.css
-* Compile js will go here dist/js/main.min.js
-* Resultent html will go here dist/Prototype/Templates
+## Docs folder ##
+* Compile css will go here docs/css/style.min.css
+* Compile js will go here docs/js/main.min.js
+* Resultent html will go here docs/Prototype/Templates
  

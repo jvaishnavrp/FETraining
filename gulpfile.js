@@ -28,25 +28,25 @@ var browserSync = require('browser-sync').create();
 
 // Project related variables
 var styleSRC = './Assets/scss/style.scss';
-var styleURL = './dist/css/';
+var styleURL = './docs/css/';
 var mapURL = './';
 
 var jsSRC = './Assets/js/';
 var jsFront = 'main.js';
 var jsFiles = [jsFront];
-var jsURL = './dist/js/';
+var jsURL = './docs/js/';
 
 var imgSRC = './Assets/images/**/*';
-var imgURL = './dist/images/';
+var imgURL = './docs/images/';
 
 var videoSRC = './Assets/videos/**/*';
-var videoURL = './dist/videos/';
+var videoURL = './docs/videos/';
 
 var fontsSRC = './Assets/fonts/**/*';
-var fontsURL = './dist/fonts/';
+var fontsURL = './docs/fonts/';
 
 var htmlSRC = './*.html';
-var htmlURL = './dist/';
+var htmlURL = './docs/';
 
 var styleWatch = './Assets/scss/**/*.scss';
 var jsWatch = './Assets/js/**/*.js';
@@ -61,7 +61,7 @@ var htmlComponent = './Prototype/Components/**/*.html';
 function browser_sync() {
     browserSync.init({
         server: {
-            baseDir: './dist/'
+            baseDir: './docs/'
         }
     });
 }
@@ -116,10 +116,10 @@ function js(done) {
            indent: true,
            basepath: './Prototype/Components/**'
        }))
-       .pipe(dest('./dist/Prototype/Templates'))
+       .pipe(dest('./docs/Prototype/Templates'))
      .pipe(inject(
-           src(['./dist/css/style.min.css', './dist/js/main.min.js'], { read: false }), { relative: true }))
-       .pipe(dest('./dist/Prototype/Templates'))
+           src(['./docs/css/style.min.css', './docs/js/main.min.js'], { read: false }), { relative: true }))
+       .pipe(dest('./docs/Prototype/Templates'))
        .pipe(browserSync.stream());
     done();
  };
@@ -146,7 +146,7 @@ function html() {
     return triggerPlumber(htmlSRC, htmlURL);
 };
 function clean() {
-    return del(['./dist'])
+    return del(['./docs'])
 }
 function watch_files() {
 
