@@ -1,0 +1,20 @@
+/*=============  Vendor style   ================================*/
+@import "./vendor/bootstrap";
+@import "./vendor/fontawesome";
+
+
+
+/*=================  base scss  ================================*/
+@import "./base/fonts";
+@import "./base/var";
+@import "./base/mixin";
+@import "./base/base";
+@import "./base/theme";
+
+
+/*============= Component style ================================*/
+
+
+@import "./components/banner-carousel";
+@import "./components/footer";
+@import "./components/banner-video";

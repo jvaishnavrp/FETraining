@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Document</title>
+   
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <!-- endinject -->
+</head>
+<body>
+   
+    <main id="main">
+        <section class="banner-video-comp" role="presentation">
+            <video class="banner-video" src="../../videos/random-video.mp4"  muted autoplay playsinline
+                loop=""></video>
+            <button class="banner-video__control-button" aria-label="play/pause video" title="play/pause video" aria-pressed="false"><i
+                    class="fas fa-play banner-video__control-button-play" aria-hidden="true"></i><i class="fas fa-pause banner-video__control-button-pause" aria-hidden="true"></i></button>
+  
+        </section>
+        <section class="banner-carousel">
+           <!--In case of change the slide in time internal remove data-bs-interval="false" -->
+           <div id="myCarousel" class="carousel slide banner-carousel__slider" data-bs-ride="carousel" data-bs-touch="true"
+              data-bs-interval="false">
+              <div class="carousel-inner">
+                 <div class="carousel-item active">
+                    <!-- Provide informative content related to image in aria-label attribute -->
+          
+                    <div class="banner-carousel__image" role="img" aria-label="image"
+                       style="background-image: url('https://picsum.photos/1200/960');">
+                         <!-- Provide left or right value in data-text-align attribute -->
+                       <div class="banner-carousel__text" data-text-align="left">
+                          <h1 class="banner-carousel__text-title">Treat Yourself</h1>
+                          <h2 class="banner-carousel__text-subtitle">...Remove Lines</h2>
+                       </div><a href="#" class="banner-carousel__link"
+                          aria-label="Schedule your consultent by clinking on the link"
+                          title="Schedule your consultent by clinking on the link">button text</a>
+                    </div>
+                 </div>
+                 <div class="carousel-item">
+                    <div class="banner-carousel__image" role="img" aria-label="image"
+                       style="background-image: url('https://picsum.photos/1100/960');">
+                       <div class="banner-carousel__text" data-text-align="center">
+                          <h1 class="banner-carousel__text-title">Look years</h1>
+                          <h2 class="banner-carousel__text-subtitle">Younger...</h2>
+                       </div><a href="#" class="banner-carousel__link"
+                          aria-label="Schedule your consultent by clinking on the link"
+                          title="Schedule your consultent by clinking on the link">button text</a>
+                    </div>
+                 </div>
+                 <div class="carousel-item">
+                    <div class="banner-carousel__image" role="img" aria-label="image" 
+                       style="background-image: url('https://picsum.photos/1000/960');">
+                       <div class="banner-carousel__text" data-text-align="right">
+                          <h1 class="banner-carousel__text-title">Love Your body</h1>
+                          <h2 class="banner-carousel__text-subtitle">even more...</h2>
+                       </div><a href="#" class="banner-carousel__link"
+                          aria-label="Schedule your consultent by clinking on the link"
+                          title="Schedule your consultent by clinking on the link">button text</a>
+                    </div>
+                 </div>
+              </div>
+              <button class="carousel-control-prev banner-carousel__button" aria-label="Previous slide" type="button"
+                 data-bs-target="#myCarousel" data-bs-slide="prev">
+                 <span class="carousel-control-prev-icon banner-carousel__button-left" aria-hidden="true"></span>
+              </button>
+              <button class="carousel-control-next banner-carousel__button" type="button" aria-label="Next slide"
+                 data-bs-target="#myCarousel" data-bs-slide="next">
+                 <span class="carousel-control-next-icon banner-carousel__button-right" aria-hidden="true"></span>
+              </button>
+           </div>
+        </section>
+      
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__container-left">
+                    <div class="footer__container-left-contain">
+               
+              
+
+                    </div>
+                </div>
+                <div class="footer__container-right">
+                    <div class="footer__container-right-contain">
+                        <ul class="footer__container-right-contain-list">
+                            <li class="footer__container-right-contain-list-item"><a href="#"
+                                    class="footer__container-right-contain-list-item-link" title="about"
+                                    aria-label="about">About</a></li>
+                            <li class="footer__container-right-contain-list-item"><a href="#"
+                                    class="footer__container-right-contain-list-item-link" title="Meet the team"
+                                    aria-label="Meet the team">Meet the team</a></li>
+                            <li class="footer__container-right-contain-list-item"><a href="./service-page.html"
+                                    class="footer__container-right-contain-list-item-link" title="services"
+                                    aria-label="services">Services</a></li>
+                            <li class="footer__container-right-contain-list-item"><a href="#"
+                                    class="footer__container-right-contain-list-item-link" title="Locations"
+                                    aria-label="Locations">Locations</a></li>
+                            <li class="footer__container-right-contain-list-item"><a href="#"
+                                    class="footer__container-right-contain-list-item-link" title="Gallery"
+                                    aria-label="Gallery">Gallery</a></li>
+                            <li class="footer__container-right-contain-list-item"><a href="#"
+                                    class="footer__container-right-contain-list-item-link" title="Contact us"
+                                    aria-label="Contact us">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__inner-container">
+                <div class="footer__inner-container-content">
+                    <a class="footer__inner-container-content-link" href="#" aria-label="EOE" title="EOE">EOE
+                    </a>
+                    <a class="footer__inner-container-content-link" href="#" aria-label="Privacy" title="Privacy">Privacy
+                    </a>
+                    <a class="footer__inner-container-content-link" href="#" aria-label="Terms of Use"
+                        title="Terms of Use">Terms of Use
+                    </a>
+                    <a class="footer__inner-container-content-link" href="#" aria-label="Public Notice"
+                        title="Public Notice">Public Notice
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!-- JS ============================== -->
+
+    <!-- inject:js -->
+    <script src="../../js/main.min.js"></script>
+    <!-- endinject -->
+    <!-- / JS ============================ -->
+</body>
+</html>
