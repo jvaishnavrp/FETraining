@@ -1,6 +1,6 @@
 .cmp-card-teaser {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: $arial;
+    background-color: $white-smoke;
     margin: 0;
     padding: 20px;
 
@@ -12,11 +12,11 @@
     }
 
     &__card {
-        background-color: #fff;
+        background-color: $white;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        width: 28%;
+        max-width: 350px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -31,13 +31,13 @@
     }
 
     &__title {
-        color: #ff5722;
+        color: $dark-orange;
         font-size: 24px;
         margin: 20px 0;
     }
 
     &__description {
-        color: #333;
+        color: $charcol;
         font-size: 16px;
         line-height: 1.5;
         flex-grow: 1;
@@ -47,15 +47,15 @@
         display: inline-block;
         margin-top: 20px;
         padding: 10px 20px;
-        color: #ff5722;
+        color: $dark-orange;
         font-size: 14px;
         text-decoration: none;
-        border: 1px solid #ff5722;
+        border: 1px solid $dark-orange;
         border-radius: 4px;
 
         &:hover {
-            background-color: #ff5722;
-            color: #fff;
+            background-color: $dark-orange;
+            color: $white;
         }
     }
 
