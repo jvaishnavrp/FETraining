@@ -1,0 +1,189 @@
+.home-design{
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    align-items: center;
+
+    &-title{
+        color: $white-smoke;
+        font-size: 40px;
+        margin-top: 50px;
+        margin-left: 105px;
+        margin-right: 105px;
+        font-weight: normal;
+
+        @include min-screen(sm) {
+            margin-left: 115px;
+            margin-right: 80px;
+        }
+
+        @include min-screen(md) {
+            font-size: 50px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 90px;
+        }
+
+        @include min-screen(lg) {
+            font-size: 55px;
+            margin-top: 130px;
+        }
+
+    }
+    &-content{
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        min-height: 145px;
+        min-width: 250px;
+        margin-top: 45px;
+        border-radius: 20px;
+        margin-bottom: 230px;
+
+        @include min-screen(sm) {
+            min-width: 350px;
+            min-height: 140px;
+            margin-left: 0;
+        }
+
+        @include min-screen(md) {
+            min-width: 500px;
+           flex-direction: row;
+           border-radius: 50px;
+           min-height: 90px;
+        }
+
+        @include min-screen(lg) { 
+            min-width: 550px;     
+        }
+
+        &--left{
+            display: flex;  
+            justify-content: center;
+            justify-content: space-evenly;
+            margin-top: 15px;
+    
+            @include min-screen(md) {  
+                width: 50%;
+                justify-content: space-between;
+                margin-top: 0;
+
+                .design-room:first-child{
+                    margin-left: 35px
+                }
+            }
+    
+            @include min-screen(lg) { 
+                .design-room:last-child{
+                    margin-right: 20px;
+                }
+                
+            }
+
+
+            .design-room{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                &__label{
+                    color: $grey;
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+    
+                &-content{
+                    display: flex;
+                }
+                &__quantity{
+                    border-bottom: 1px solid $wine;
+                    width: 62px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .room-quantity{
+                        font-size: 10px;
+                    }
+                }
+                .icons{
+                    height: 22px;
+                    color:  $wine;
+                }
+            }
+    
+        }
+        &--right{
+            display: flex;  
+            justify-content: space-evenly;
+            margin-top: 15px;
+
+            .home-design-right-item:last-child{
+                margin-right: 10px;
+            }
+           
+    
+            @include min-screen(md) {
+                display: flex;  
+                width: 50%;
+                justify-content: space-around;
+                margin-top: 0;;
+    
+                .home-design-right-item:last-child{
+                    margin-right: 20px;
+                }
+                .home-design-right-item:first-child{
+                    margin-left: 18px;
+                }
+            }
+    
+            @include min-screen(lg) { 
+                .home-design-right-item:first-child{
+                    margin-left: 10px;
+                }
+            }
+    
+
+
+            .home-design-location{
+                color: $grey;
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .design-room__label{
+                    margin-bottom: 5px;
+            
+                    @include min-screen(md) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .location-list{
+                border-bottom: 1px solid $wine;
+
+                .dopdown-up{
+                    color:  $wine;
+                    cursor: pointer;
+                }
+                .cities{
+                    color: $black;
+                }
+            }
+
+            .home-design-search{
+                display: flex;
+                align-items: center;
+
+                .search-icon{
+                    font-size: 35px;
+                    color: $wine;
+                }
+            }
+        }
+       
+    }
+  
+}
