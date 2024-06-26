@@ -2,16 +2,17 @@
     padding: 20px;
 
     @include min-screen(md) {
+        height: 500px;
         padding: 0;
-        position: relative;
     }
 
     &-wrapper {
-        background-color: $darkestgrey;
+        background-color: var(--banner-bg-color);
         display: flex;
         flex-direction: column-reverse;
 
         @include min-screen(md) {
+            height: 86%;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
@@ -28,7 +29,7 @@
             &-title {
                 padding-top: 15px;
                 padding-bottom: 5px;
-                color: $white;
+                color: var(--banner-text-color);
                 opacity: 0.7;
                 font-size: 40px;
 
@@ -48,7 +49,7 @@
             &-smallText {
                 padding-bottom: 20px;
                 font-size: 20px;
-                color: $white;
+                color: var(--banner-text-color);
                 opacity: 0.7;
 
                 @include min-screen(lg) {
@@ -63,25 +64,18 @@
        }
 
        &__image {
-            background-color: $white;
+            background-color: var(--banner-text-color);
             height: 400px;
+            width: 100%;
 
             @include min-screen(md) {
-                position: absolute;
-                top: 12%;
-                right: 12%;
-                height: 325px;
-                width: 32%;
+                width: 285px;
+                position: relative;
+                bottom: -70px;
             }
 
             @include min-screen(lg) {
-                height: 360px;
-                width: 30%;
-            }
-
-            @include min-screen(xl) {
-                height: 400px;
-                width: 25%;
+                width: 300px;
             }
 
             img {
@@ -92,4 +86,8 @@
        }
     }
     
+    &.light{
+        --banner-bg-color: var(--warm-grey);
+        --banner-text-color: var(--black);
+    }
 }

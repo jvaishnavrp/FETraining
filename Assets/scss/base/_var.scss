@@ -27,6 +27,7 @@ $darkestgrey: #352f2f;
 
 
 
+
 $openSans: 'Open Sans', sans-serif;
 $bodoni: 'Source Serif Pro', serif;
 $arimo: 'Arimo', sans-serif;
@@ -39,3 +40,15 @@ $font-bold:bold;
 $font-medium:500;
 $font-light:300;
 $font-normal:normal;
+
+:root{
+    --white:#{$white};
+    --black:#{$black};
+    --darkestgrey: #352f2f;
+    --warm-grey : #edeae4;
+
+    --banner-bg-color: var(--darkestgrey);
+    --banner-text-color: var(--white);
+
+
+}
