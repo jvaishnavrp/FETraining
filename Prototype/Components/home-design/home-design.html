@@ -2,27 +2,23 @@
          style="background-image: linear-gradient(to top, rgba(247, 247, 247, 0), #c9c9c9), url('https://media.designcafe.com/wp-content/uploads/2021/05/26182848/indian-style-kitchen-interior-designs-for-your-home.jpg');" >
    
     <h3 class="home-design-title">Let`s build your dream together.</h3>
-    <div class="home-design-content">
+    <form class="home-design-content">       
         <div class="home-design-content--left">
             <div class="design-room first">
                 <span class="design-room__label">Bedroom</span>
                 <div class="design-room-content">
-                  <span class="icons design-room__minus fas fa-minus-circle"></span>
-                  <div class="design-room__quantity">
-                    <span class="room-quantity">3+</span>
-                  </div>
-                  <span class="icons design-room__plus fas fa-plus-circle"></span>
+                    <button class="icons design-room__minus fas fa-minus-circle"></button>
+                    <input type="text" class="design-room__quantity" value="3+" id="quantity" name="quantity">
+                    <button class="icons design-room__plus fas fa-plus-circle"></button>
                 </div>
 
             </div>
             <div class="design-room">
                 <span class="design-room__label">Bathroom</span>
                 <div class="design-room-content">
-                  <span class="icons design-room__minus fas fa-minus-circle"></span>
-                  <div class="design-room__quantity">
-                    <span class="room-quantity">2+</span>
-                  </div>
-                  <span class="icons design-room__plus fas fa-plus-circle"></span>
+                    <button class="icons design-room__minus fas fa-minus-circle"></button>
+                    <input type="text" class="design-room__quantity" value="2+" id="quantity" name="quantity">
+                    <button class="icons design-room__plus fas fa-plus-circle"></button>
                 </div>
             </div>
         </div>
@@ -30,14 +26,13 @@
             <div class="home-design-location home-design-right-item">
                 <span class="design-room__label">Near</span>
                 <div class="location-list">
-                  <span class="cities">Northern California</span>
-                  <span class="dopdown-up  fas fa-caret-down"></span>
+                    <span class="cities">Northern California</span>
+                    <button class="dopdown-up  fas fa-caret-down"></button>
                 </div>
             </div>
             <div class="home-design-search home-design-right-item">
-                <span class="search-icon fas fa-search"></span>
+                <button id="submit" class="search-icon fas fa-search"></button>
             </div>
         </div>
-
-    </div>
+    </form>
 </section>
