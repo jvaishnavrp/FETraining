@@ -9,7 +9,7 @@ $black:#000000;
 $light-blue:#589BC7;
 $magenta-pink:#ff0096;
 $electric-violet:#da0f8a;
-$grey:#999;
+$grey:#999999;
 $bluebarry:#f73ba9;
 $grey44:#707070;
 $metallic-seaweed:#0D5F95;
@@ -21,6 +21,11 @@ $grey94:#f0f0f0;
 $medium-dark-shed-cyan-blue:#06467E;
 $charcol:#333;
 $primary-blue:#0096d6;
+$burlywood: #deb887;
+$darkgray: #a9a9a9;
+$grey80: #808080;
+$darkestgrey: #352f2f;
+
 $wine: #3f2222;
 
 
@@ -38,3 +43,15 @@ $font-bold:bold;
 $font-medium:500;
 $font-light:300;
 $font-normal:normal;
+
+:root{
+    --white:#{$white};
+    --black:#{$black};
+    --darkestgrey: #352f2f;
+    --warm-grey : #edeae4;
+
+    --banner-bg-color: var(--darkestgrey);
+    --banner-text-color: var(--white);
+
+
+}
