@@ -1,0 +1,132 @@
+.cards {
+    margin-block: 30px 10px;
+    @include min-screen(md){
+        margin-block: 60px 70px;
+    }
+    &__container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding:10px;
+        @include max-screen(xl){
+            padding-inline: 20px;
+        }
+    }
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @include min-screen(md){
+            flex-direction: row;
+        }
+        &--lists {
+            width: 100%;
+            margin-block: 0 40px;
+            @include min-screen(md){
+                width: 23%;
+                margin: 0;
+            }
+            &:first-child{
+                order: 2;
+                @include min-screen(md){
+                    order: inherit;
+                }
+            }
+            &:last-child{
+                order: 2;
+                @include min-screen(md){
+                    order: inherit;
+                }
+                .cards__content--title{
+                    @include max-screen(md){
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                width: 100%;
+                order: 1;
+                @include min-screen(md){
+                    width: 49%;
+                    order: inherit;
+                }
+                .cards__content--title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.31;
+                    @include min-screen(lg){
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        &--img {
+            width: 100%;
+            height: 100%;
+        }
+        &--desc {
+            color: $grey;
+            font-size: 20px;
+            line-height: 1.4;
+            font-family: $roboto;
+            display: none;
+            @include min-screen(md){
+                display: block;
+            }
+        }
+        &--desktop {
+            border-top: 1px solid $darkzeal;
+            display: none;
+            @include min-screen(md){
+                display: block;
+            }
+        }
+        &--mobile {
+            border-top: 1px solid $darkzeal;
+            display: block;
+            @include min-screen(md){
+                display: none;
+            }
+        }
+        &--pretitle {
+            color: $zeal;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: $roboto;
+            display: block;
+            line-height: 1.25;
+            margin-block: 15px;
+            @include min-screen(lg){
+                font-size: 16px;
+            }
+        }
+        &--title {
+            color: $darkzeal;
+            font-family: $roboto;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.33;
+            padding-bottom: 10px;
+            @include min-screen(lg){
+                font-size: 24px;
+            }
+        }
+        &--subtitle {
+            color: $zeal;
+            display: none;
+            font-family: $roboto;
+            font-size: 16px;
+            line-height: 1.5;
+            padding-bottom: 20px;
+            @include min-screen(md){
+                display: block;
+            }
+        }
+    }
+}
+
+
+
