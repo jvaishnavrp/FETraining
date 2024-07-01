@@ -28,4 +28,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs  # Directory to deploy, make sure it matches your output folder
+        publish_dir: ./docs  # Directory to deploy
