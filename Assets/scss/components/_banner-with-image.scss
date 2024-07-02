@@ -1,0 +1,93 @@
+.bannerImage {
+    padding: 20px;
+
+    @include min-screen(md) {
+        height: 500px;
+        padding: 0;
+    }
+
+    &-wrapper {
+        background-color: var(--banner-bg-color);
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include min-screen(md) {
+            height: 86%;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 4% 12%;
+        }
+
+        &__text {
+            padding: 6% 40% 6% 6%;
+
+            @include min-screen(md) {
+                padding: 0;
+            }
+
+            &-title {
+                padding-top: 15px;
+                padding-bottom: 5px;
+                color: var(--banner-text-color);
+                opacity: 0.7;
+                font-size: 40px;
+
+                @include min-screen(md) {
+                    font-size: 45px;
+                }
+
+                @include min-screen(lg) {
+                    font-size: 50px;
+                }
+
+                @include min-screen(xl) {
+                    font-size: 55px;
+                }
+            }
+
+            &-smallText {
+                padding-bottom: 20px;
+                font-size: 20px;
+                color: var(--banner-text-color);
+                opacity: 0.7;
+
+                @include min-screen(lg) {
+                    font-size: 17px;
+                }
+
+                .underline-style {
+                    line-height: 1.5;
+                    border-bottom: 1px solid;
+                }
+            }
+       }
+
+       &__image {
+            background-color: var(--banner-text-color);
+            height: 400px;
+            width: 100%;
+
+            @include min-screen(md) {
+                width: 285px;
+                position: relative;
+                bottom: -70px;
+            }
+
+            @include min-screen(lg) {
+                width: 300px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+       }
+    }
+    
+    &.light{
+        --banner-bg-color: var(--warm-grey);
+        --banner-text-color: var(--black);
+    }
+}
