@@ -159,8 +159,6 @@
     }
   }
 }
-
-
 // ---*** Carousel SCSS ***---
 .carousel {
   position: relative;
@@ -198,7 +196,7 @@
     cursor: pointer;
     padding: 10px;
     z-index: 1;
-    transition: background-color $transition-speed ease;
+    transition: background-color 0.5s ease;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.7);
@@ -227,9 +225,9 @@
     }
   }
 
-    @media only screen and (min-width: 992px) {
-      .carousel {
-        height: 70vh;
-      }
+  @media only screen and (min-width: 992px) {
+    .carousel {
+      height: 70vh;
     }
   }
+}
