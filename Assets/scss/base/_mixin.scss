@@ -155,12 +155,24 @@ $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
         i {
             color: $white;
         }
-
     }
 
     @include max-screen(lg) {
         font-size: 20px;
     }
+}
 
+@mixin hero-banner-button($color, $backgroundColor) {
+    color: $color;
+    background-color: $backgroundColor;
+    width: 220px;
+    border: 1px solid $backgroundColor;
+    border-radius: 25px;
+    padding: 10px 0;
+    font-weight: 600;
+
+    &:hover {
+        box-shadow: 2px 2px 2px $backgroundColor;
+    }
 }
 
