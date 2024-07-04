@@ -47,11 +47,17 @@
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
-        text-transform: uppercase;
-        border-radius: 5px;  
+        display: inline-flex;
+        justify-content: center;
+        position: relative;
+        border-radius: 5px;
         width: 100%;
+        &::after {
+            content: $right-arrow;
+            font-size: 16px;
+            margin-left: 8px;
+        }
         @include min-screen(md){
-            position: relative;
             max-width: 160px;
             &:hover {
                 transform-origin: top left;
