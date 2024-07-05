@@ -49,7 +49,11 @@ $font-normal:normal;
     --black:#{$black};
     --darkestgrey: #352f2f;
     --warm-grey : #edeae4;
+
+    --banner-bg-color: var(--darkestgrey);
+    --banner-text-color: var(--white);
+
     --charcoal:#{$charcol};
-    --gradient-light: rgba(255, 255, 255, 0.7);
+    --light-grey: rgba(255, 255, 255, 0.7);
     --orange: rgb(194, 85, 12);
 }
