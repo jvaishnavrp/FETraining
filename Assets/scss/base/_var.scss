@@ -49,9 +49,14 @@ $font-normal:normal;
     --black:#{$black};
     --darkestgrey: #352f2f;
     --warm-grey : #edeae4;
+    --dark-blue: #353435;
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
+
+    --hero-banner-bg-color: var(--warm-grey);
+    --hero-banner-text-color: var(--black);
+
 
     --charcoal:#{$charcol};
     --light-grey: rgba(255, 255, 255, 0.7);
