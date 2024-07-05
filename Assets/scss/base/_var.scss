@@ -25,9 +25,9 @@ $burlywood: #deb887;
 $darkgray: #a9a9a9;
 $grey80: #808080;
 $darkestgrey: #352f2f;
-
+$sonic-silver: #757575;
 $wine: #3f2222;
-
+$ghost-white: #f9f9f9;
 
 
 $openSans: 'Open Sans', sans-serif;
@@ -47,6 +47,9 @@ $font-normal:normal;
 :root{
     --white:#{$white};
     --black:#{$black};
+    --magenta-pink:#{$magenta-pink};
+    --dark-red:#{$dark-red};
+
     --darkestgrey: #352f2f;
     --warm-grey : #edeae4;
     --dark-blue: #353435;
@@ -57,6 +60,7 @@ $font-normal:normal;
     --hero-banner-bg-color: var(--warm-grey);
     --hero-banner-text-color: var(--black);
 
-
+    --profile-card-light-background-color: var(--magenta-pink);
+    --profile-card-dark-background-color: var(--dark-red);
 
 }
