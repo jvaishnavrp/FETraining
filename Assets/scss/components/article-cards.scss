@@ -1,6 +1,7 @@
 .article-cards{
     background-color: $white-smoke;
     font-family: $arial;
+    max-width: 100%;
     margin: 0;
 
     &__menu{
@@ -17,6 +18,7 @@
     }
 
     &__container{
+        max-width: inherit;
         display: grid;
         gap: 20px;
         @include min-screen(sm) {
