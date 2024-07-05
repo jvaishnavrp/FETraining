@@ -1,0 +1,93 @@
+.article-cards{
+    background-color: $white-smoke;
+    font-family: $arial;
+    margin: 0;
+
+    &__menu{
+        display: flex;
+        padding: 20px;
+       
+        &--item{
+            @include article-dropdown-style;
+            max-width: 150px;
+        }
+        .dopdown-up{
+            @include article-dropdown-style;
+        }
+    }
+
+    &__container{
+        display: grid;
+        gap: 20px;
+        @include min-screen(sm) {
+            padding: 0px 20px;
+        }
+        @include min-screen(md) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        @include min-screen(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__card{
+        background-color: var(--card-bg-color);
+        margin-bottom: 20px;
+        &--image{
+            width: 770px;
+        }
+        &--detailed{
+            display: flex;
+            margin-left: 1rem;
+            margin-top: 1rem;
+            .card-detailed__location{
+                font-weight: $font-bold;
+                color: $wine;
+
+                &::after{
+                    content: "   | ";
+                    padding: 0px 8px;
+                }
+
+            }
+            .card--detailed__publishdate{
+                font-size: 12px;
+                font-weight: $font-bold;
+                margin-top: 4px;
+                margin-left: 8px;
+
+            }
+
+        }
+        &--title{
+            color: var(--card--title-color);
+            margin-left: 1rem;
+            font-size: 2rem;
+            margin: 1rem 1rem;
+        }
+        &--description{
+            margin: 0rem 1rem;
+            margin-bottom: 2rem;
+            padding-right: 1rem;
+
+            .description-detail{
+                font-size: 14px;
+                line-height: 22px;
+
+                &--link{
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: $wine;
+
+                    &-btnmore{
+                        border: none;
+                        background: transparent;
+                        color: $wine;
+                        font-size: 10px;
+                        padding: 0px;
+                    }
+                }
+            }
+        }
+    }
+}

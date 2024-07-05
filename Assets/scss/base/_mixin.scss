@@ -163,4 +163,9 @@ $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
     }
 
 }
+@mixin article-dropdown-style {
+    background-color: $white-smoke;
+    border: none;
+    border-bottom: 1px solid $black;
+}
 

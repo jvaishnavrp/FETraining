@@ -25,7 +25,6 @@ $burlywood: #deb887;
 $darkgray: #a9a9a9;
 $grey80: #808080;
 $darkestgrey: #352f2f;
-
 $wine: #3f2222;
 
 
@@ -52,6 +51,8 @@ $font-normal:normal;
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
+    --card-bg-color: var(--white);
+    --card--title-color: var($darkestgrey);
 
 
 }
