@@ -9,24 +9,28 @@
         padding: 10px 8%;
         flex-wrap: wrap;
 
-        @include max-screen(sm) {
-            flex-direction: column;
-            justify-content: center;
+
+        .burger {
+            display: none;
+
+            @include max-screen(lg) {
+                display: block;
+                font-size: 35px;
+                background-color: black;
+                color: white;
+                border: none;
+            }
         }
 
         &_logo {
-            margin-right: 5%;
             display: flex;
-            gap: 10px;
-            order: 1;
-            cursor: pointer;
+            align-items: center;
+            gap: 15px;
 
-            @include max-screen(lg) {
-                margin-bottom: 15px;
-            }
-
-            @include max-screen(sm) {
-                margin-right: 0;
+            .site-logo {
+                display: flex;
+                gap: 10px;
+                cursor: pointer;
             }
             
             &-image {
@@ -42,17 +46,40 @@
 
         &_menu {
             flex: 1;
-            order: 2;
+            margin-left: 6%;
 
             @include max-screen(lg) {
-                order: 4;
-                width: 100%;
-                border-top: 1px solid $grey80;
-                padding-top: 10px;
+                display: none;
             }
 
-            @include max-screen(sm) {
-                order: 2;
+            &.is-active {
+                    display: block;
+                    z-index: 999;
+                    padding-top: 10px;
+                    width: 100%;
+                    position: absolute;
+                    background: black;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0;
+                    opacity: 0.9;
+                    overflow: hidden;
+                    transition: 0.5s ease;
+            }
+
+            .close-icon {
+                display: none;
+                
+                @include max-screen(lg) {
+                    display: block;
+                    color: white;
+                    position: absolute;
+                    left: 15px;
+                    top: 10px;
+                    z-index: 999;
+                    font-size: 25px;
+                }
             }
 
             &-ul {
@@ -68,9 +95,6 @@
                 @include max-screen(lg) {
                     justify-content: center;
                     gap: 5%;
-                }
-
-                @include max-screen(sm) {
                     flex-direction: column;
                 }
             }
@@ -79,14 +103,16 @@
                 text-align: center;
                 opacity: 0.7;
 
+                @include max-screen(lg) {
+                    text-align: right;
+                    padding-bottom: 10px;
+                    padding-right: 30px;
+                }
+
                 &:hover {
                     cursor: pointer;
                     opacity: 1;
                     transition: 0.5s;
-                }
-
-                @include max-screen(sm) {
-                    padding-bottom: 10px;
                 }
             }
         }
@@ -97,24 +123,11 @@
             border: 1px solid $darkgray;
             border-radius: 10px;
             background-color: $burlywood;
-            order: 3;
-
-            @include max-screen(lg) {
-                margin-left: 31%;
-                margin-bottom: 10px;
-            }
-
-            @include max-screen(sm) {
-                margin-left: 0;
-                margin-top: 10px;
-            }
 
             &:hover {
                 box-shadow: 1.5px 2px 2px $dark-red;
                 color: $dark-red;
             }
-
         }
     }
-
 }
