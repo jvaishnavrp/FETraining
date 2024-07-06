@@ -22,10 +22,22 @@ jobs:
       run: npm install
 
     - name: Run Gulp default task
-      run:  npx gulp default
+      run: npx gulp default
+
+    - name: Check Git Version
+      run: git --version
+
+    - name: Check Node Version
+      run: node --version
+
+    - name: Check NPM Version
+      run: npm --version
+
+    - name: Check Directory
+      run: ls -la
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.GH_PAT }}
         publish_dir: ./docs  # Directory to deploy
