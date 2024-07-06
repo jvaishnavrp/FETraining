@@ -18,7 +18,7 @@ const headerFn = () => {
             };
         });
     };
-
+    
     openMenu();
     closeMenu();
 };
