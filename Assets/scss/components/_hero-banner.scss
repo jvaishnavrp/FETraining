@@ -12,7 +12,7 @@
         }
 
         &__text {
-            padding: 80px 30px;
+            padding: toRem(80) toRem(30);
             text-align: center;
 
             @include min-screen(lg) {
@@ -21,7 +21,7 @@
             }
 
             &-logo {
-                margin-bottom: 20px;
+                margin-block-end: toRem(20);
 
                 img {
                     aspect-ratio: 6/2;
@@ -47,14 +47,14 @@
 
             &-description {
                 color: var(--hero-banner-text-color);
-                margin-bottom: 40px;
+                margin-block-end: toRem(40);
             }
 
             &-button {
                 @include hero-banner-button(var(--white),var(--black));
 
                 i{
-                    margin-left: 10px;
+                    margin-inline-start: toRem(10);
                 }
             }
         }
