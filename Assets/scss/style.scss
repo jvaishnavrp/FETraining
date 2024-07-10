@@ -7,9 +7,9 @@
 /*=================  base scss  ================================*/
 @import "./base/fonts";
 @import "./base/var";
+@import "./base/function";
 @import "./base/mixin";
 @import "./base/base";
-@import "./base/theme";
 
 
 /*============= Component style ================================*/
@@ -25,4 +25,3 @@
 @import "./components/hero-banner";
 @import "./components/cards";
 @import "./components/card-grid";
-@import "./components/profile-card";

@@ -1,0 +1,7 @@
+
+//use below function to convert value from px to rem.
+//for ex:- font-size:toRem(16); it will convert 16px into 1rem
+
+@function toRem($value) {
+    @return ($value / 16) * 1rem;   
+}
