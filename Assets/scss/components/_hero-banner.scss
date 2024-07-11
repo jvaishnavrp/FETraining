@@ -1,26 +1,27 @@
 .cmp-hero-banner {
     background-color: var(--hero-banner-bg-color);
+    position: relative;
+    z-index: 0;
 
     &-wrapper {
-        position: relative;
 
         @include min-screen(lg) {
             display: flex;
             justify-content: space-between;
-            max-width: 1130px;
-            margin: 0 auto;
+            padding: 0 10%;
         }
 
         &__text {
-            padding: 80px 30px;
+            padding: toRem(80) toRem(30);
             text-align: center;
 
             @include min-screen(lg) {
                 width: 40%;
+                text-align: left;
             }
 
             &-logo {
-                margin-bottom: 20px;
+                margin-block-end: toRem(20);
 
                 img {
                     aspect-ratio: 6/2;
@@ -35,6 +36,7 @@
 
                     @include min-screen(lg) {
                         width: 40%;
+                        margin: 0;
                     }
 
                     @include min-screen(xl) {
@@ -45,18 +47,14 @@
 
             &-description {
                 color: var(--hero-banner-text-color);
-                margin-bottom: 40px;
+                margin-block-end: toRem(40);
             }
 
             &-button {
-                @include hero-banner-button($white,$black);
-
-                &.dark-btn {
-                    @include hero-banner-button($black,$white);
-                }
+                @include hero-banner-button(var(--white),var(--black));
 
                 i{
-                    margin-left: 10px;
+                    margin-inline-start: toRem(10);
                 }
             }
         }
@@ -67,11 +65,17 @@
             @include min-screen(lg) {
                 display: block;
                 width: 40%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
             }
 
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -79,5 +83,9 @@
     &.dark-theme {
         --hero-banner-bg-color: var(--dark-blue);
         --hero-banner-text-color: var(--white);
+
+        .cmp-hero-banner-wrapper__text-button {
+            @include hero-banner-button(var(--black),var(--white));
+        }
     }
 }
