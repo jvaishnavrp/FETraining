@@ -6,23 +6,23 @@
 
     &__menu{
         display: flex;
-        padding: 20px;
+        padding: toRem(20);
        
         &--item{
-            @include article-dropdown-style;
-            max-width: 150px;
+            @include article-dropdown-style(var(--white-smoke), var(--black));
+            max-width: toRem(150);
         }
         .dropdown-up{
-            @include article-dropdown-style;
+            @include article-dropdown-style(var(--white-smoke), var(--black));
         }
     }
 
     &__container{
         max-width: inherit;
         display: grid;
-        gap: 20px;
+        gap: toRem(20);
         @include min-screen(sm) {
-            padding: 0px 20px;
+            padding: 0 toRem(20);
         }
         @include min-screen(md) {
             grid-template-columns: repeat(2, 1fr);
@@ -34,47 +34,46 @@
     }
     &__card{
         background-color: var(--card-bg-color);
-        margin-bottom: 20px;
+        margin-block-end: toRem(20);
         &--image{
-            width: 770px;
+            width: toRem(770);
         }
         &--detailed{
             display: flex;
-            margin-left: 1rem;
-            margin-top: 1rem;
+            margin-inline-start: 1rem;
+            margin-block-start: 1rem;
             .card-detailed__location{
                 font-weight: $font-bold;
                 color: $wine;
 
                 &::after{
                     content: "   | ";
-                    padding: 0px 8px;
+                    padding: 0 toRem(8);
                 }
 
             }
             .card--detailed__publishdate{
-                font-size: 12px;
+                font-size: toRem(12);
                 font-weight: $font-bold;
-                margin-top: 4px;
-                margin-left: 8px;
+                margin-block-start: toRem(4);
+                margin-inline-start: toRem(8);
 
             }
 
         }
         &--title{
             color: var(--card--title-color);
-            margin-left: 1rem;
             font-size: 2rem;
             margin: 1rem 1rem;
         }
         &--description{
-            margin: 0rem 1rem;
-            margin-bottom: 2rem;
-            padding-right: 1rem;
+            margin: 0 1rem;
+            margin-block-end: 2rem;
+            padding-inline-end: 1rem;
 
             .description-detail{
-                font-size: 14px;
-                line-height: 22px;
+                font-size: toRem(14);
+                line-height: toRem(1.571428);
 
                 &--link{
                     text-decoration: none;
@@ -85,8 +84,8 @@
                         border: none;
                         background: transparent;
                         color: $wine;
-                        font-size: 10px;
-                        padding: 0px;
+                        font-size: toRem(10);
+                        padding: 0;
                     }
                 }
             }

@@ -48,11 +48,11 @@ $font-normal:normal;
     --black:#{$black};
     --darkestgrey: #352f2f;
     --warm-grey : #edeae4;
+    --white-smoke:#{$white-smoke};
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
     --card-bg-color: var(--white);
-    --card--title-color: var($darkestgrey);
-
+    --card--title-color: var(--darkestgrey);
 
 }
