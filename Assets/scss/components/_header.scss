@@ -6,59 +6,86 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 8%;
+        padding: toRem(10) 8%;
         flex-wrap: wrap;
 
-        @include max-screen(sm) {
-            flex-direction: column;
-            justify-content: center;
+
+        .burger {
+            display: none;
+
+            @include max-screen(lg) {
+                display: block;
+                font-size: toRem(35);
+                background-color: black;
+                color: white;
+                border: none;
+            }
         }
 
         &_logo {
-            margin-right: 5%;
             display: flex;
-            gap: 10px;
-            order: 1;
-            cursor: pointer;
+            align-items: center;
+            gap: toRem(15);
 
-            @include max-screen(lg) {
-                margin-bottom: 15px;
-            }
-
-            @include max-screen(sm) {
-                margin-right: 0;
+            .site-logo {
+                display: flex;
+                gap: toRem(10);
+                cursor: pointer;
             }
             
             &-image {
-                width: 40px;
-                height: 40px;
+                width: toRem(40);
+                height: toRem(40);
                 object-fit: cover;
             }
 
             &-title {
-                font-size: 13px;
+                font-size: toRem(13);
             }
         }
 
         &_menu {
             flex: 1;
-            order: 2;
+            margin-inline-start: 6%;
 
             @include max-screen(lg) {
-                order: 4;
-                width: 100%;
-                border-top: 1px solid $grey80;
-                padding-top: 10px;
+                display: none;
             }
 
-            @include max-screen(sm) {
-                order: 2;
+            &.is-active {
+                    display: block;
+                    z-index: 999;
+                    padding-block-start: toRem(10);
+                    width: 100%;
+                    position: absolute;
+                    background: black;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0;
+                    opacity: 0.9;
+                    overflow: hidden;
+                    transition: 0.5s ease;
+            }
+
+            .close-icon {
+                display: none;
+                
+                @include max-screen(lg) {
+                    display: block;
+                    color: white;
+                    position: absolute;
+                    left: toRem(15);
+                    top: toRem(10);
+                    z-index: 999;
+                    font-size: toRem(25);
+                }
             }
 
             &-ul {
                 display: flex;
-                gap: 15px;
-                margin-left: 5%;
+                gap: toRem(15);
+                margin-inline-start: 5%;
 
                 a {
                     text-decoration: none;
@@ -68,9 +95,6 @@
                 @include max-screen(lg) {
                     justify-content: center;
                     gap: 5%;
-                }
-
-                @include max-screen(sm) {
                     flex-direction: column;
                 }
             }
@@ -79,42 +103,31 @@
                 text-align: center;
                 opacity: 0.7;
 
+                @include max-screen(lg) {
+                    text-align: right;
+                    padding-block-end: toRem(10);
+                    padding-inline-end: toRem(30);
+                }
+
                 &:hover {
                     cursor: pointer;
                     opacity: 1;
                     transition: 0.5s;
-                }
-
-                @include max-screen(sm) {
-                    padding-bottom: 10px;
                 }
             }
         }
 
         &_btn {
             font-weight: 600;
-            padding: 5px 15px;
+            padding: toRem(5) toRem(15);
             border: 1px solid $darkgray;
-            border-radius: 10px;
+            border-radius: toRem(10);
             background-color: $burlywood;
-            order: 3;
-
-            @include max-screen(lg) {
-                margin-left: 31%;
-                margin-bottom: 10px;
-            }
-
-            @include max-screen(sm) {
-                margin-left: 0;
-                margin-top: 10px;
-            }
 
             &:hover {
                 box-shadow: 1.5px 2px 2px $dark-red;
                 color: $dark-red;
             }
-
         }
     }
-
 }
