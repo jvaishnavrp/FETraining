@@ -47,6 +47,7 @@ $font-normal:normal;
 :root{
     --white:#{$white};
     --black:#{$black};
+    --white-smoke: #{$white-smoke};
     --darkestgrey: #352f2f;
     --warm-grey : #edeae4;
     --dark-blue: #353435;
@@ -73,6 +74,7 @@ $font-normal:normal;
     --hero-banner-text-color: var(--black);
 
     --bg-design-bg-color: var(--white);
+    --bg-design-title-color: var(--black);
     --bg-design-description-color: var(--black);
     --bg-design-btnbg-color: var(--black);
     --bg-design-ltbottom-color: var(--dark-blue);
