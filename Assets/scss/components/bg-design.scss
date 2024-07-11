@@ -10,7 +10,7 @@
         margin-block-end: toRem(40);
 
         @include min-screen(sm) {
-            margin: toRem(0) toRem(150);
+            margin: 0 toRem(150);
             align-items: center;
         }
 
@@ -23,7 +23,7 @@
         &--description{
             color: var(--bg-design-description-color);
             font-size: toRem(21);
-            margin: toRem(35) toRem(0);
+            margin: toRem(35) 0;
         }
         &--button{
             cursor: pointer;
@@ -41,8 +41,8 @@
     }
 
     &-bottom{
-        width: toRem(0);
-        height: toRem(0);
+        width: 0;
+        height: 0;
         border-style: solid;
         border-width: toRem(75) toRem(391) toRem(53) toRem(200);
         border-color: var(--bg-design-bg-color) var(--bg-design-rtbottom-color) var(--bg-design-rtbottom-color) var(--bg-design-ltbottom-color);
