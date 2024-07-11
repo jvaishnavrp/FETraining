@@ -4,19 +4,20 @@
     &-container{
         display: flex;
         flex-direction: column;
-        margin-left: toRem(50);
-        margin-right: toRem(80);
-        padding-top: toRem(100);
-        margin-bottom: toRem(40);
+        margin-inline-start: toRem(50);
+        margin-inline-end: toRem(80);
+        padding-block-start: toRem(100);
+        margin-block-end: toRem(40);
 
         @include min-screen(sm) {
             margin: toRem(0) toRem(150);
             align-items: center;
         }
+        
         &--title{
             color: $white-smoke;
             font-size: toRem(48);
-            margin-right: toRem(40);
+            margin-inline-end: toRem(40);
            
          }
         &--description{
@@ -31,9 +32,9 @@
             color: $white;
             font-size: toRem(14);
             padding: toRem(10) toRem(30);
-            margin-right: toRem(300);
+            margin-inline-end: toRem(300);
             @include min-screen(sm) {
-                margin-right: 0;
+                margin-inline-end: 0;
             }
         }
        
