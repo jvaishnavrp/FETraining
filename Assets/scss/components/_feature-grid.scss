@@ -9,9 +9,8 @@ $padding: 10px;
 $border-radius: 3px;
 
 .feature-grid {
-    width: 90%;
     max-width: 1240px;
-    margin: 20px auto;
+    margin: 10px 5px;
     background-color: var(--white);
     display: grid;
     grid-gap: $grid-gap;
@@ -110,7 +109,8 @@ $border-radius: 3px;
         display: block;
         padding: 5px;
         margin: auto auto 20px;
-        width: 90%;
+        max-width: 90%;
+        width: 300px;
         text-align: center;
     }
 
@@ -118,7 +118,7 @@ $border-radius: 3px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: minmax(150px, auto) minmax(150px, auto);
         grid-auto-rows: minmax(100px, auto);
-
+        margin: 20px 10px;
         &__item--innovation {
             grid-column: 1 / 3;
         }
@@ -141,6 +141,7 @@ $border-radius: 3px;
     }
 
     @include min-screen(lg) {
+        margin: 20px auto;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: minmax(150px, auto) minmax(150px, auto);
         grid-auto-rows: minmax(100px, auto);
