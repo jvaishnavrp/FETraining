@@ -1,42 +1,42 @@
 .fifty-fifty-teaser {
     display: flex;
     flex-direction: column-reverse;
-    padding: 24px 16px;
+    padding: toRem(24) toRem(16);
     @include min-screen(md){
         flex-direction: row;
-        max-width: 1400px;
+        max-width: toRem(1400);
         margin: 0 auto;
-        padding: 32px;
+        padding: toRem(32);
     }
 
     &__text-content {
         width: 100%;
-        margin: 24px 0;
+        margin: toRem(24) 0;
         @include min-screen(md){
             width: 47%;
-            margin-right: 64px;
+            margin-right: toRem(64);
         }
     }
 
     &__subtitle {
         color: var(--persian-red);
-        font-size: 16px;
+        font-size: toRem(16);
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: toRem(10);
         text-transform: uppercase;
     }
 
     &__title {
-        font-size: 36px;
+        font-size: toRem(36);
         font-weight: bold;
-        margin-bottom: 20px;
+        margin-bottom: toRem(20);
         color: var(--black);
     }
 
     &__description {
-        font-size: 18px;
+        font-size: toRem(18);
         line-height: 1.6;
-        margin-bottom: 20px;
+        margin-bottom: toRem(20);
         color: var(--color-greyscale-gray-700);
     }
 
@@ -44,21 +44,21 @@
         background-color: var(--persian-red);
         color: var(--white);
         border: none;
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: toRem(10) toRem(20);
+        font-size: toRem(16);
         cursor: pointer;
         display: inline-flex;
         justify-content: center;
         position: relative;
-        border-radius: 5px;
+        border-radius: toRem(5);
         width: 100%;
         &::after {
             content: $right-arrow;
-            font-size: 16px;
-            margin-left: 8px;
+            font-size: toRem(16);
+            margin-left: toRem(8);
         }
         @include min-screen(md){
-            max-width: 160px;
+            max-width: toRem(160);
             &:hover {
                 transform-origin: top left;
                 transform: scale(1.2, 1.2);
@@ -76,7 +76,7 @@
         }
         img {
             width: auto;
-            border-radius: 5px;
+            border-radius: toRem(5);
             height: 100%;
             object-fit: cover;
         }

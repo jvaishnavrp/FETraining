@@ -105,3 +105,54 @@ a{
     color: $light-blue;
      text-decoration: underline;
 }
+
+
+/*====== Container width ===========*/
+.small-container {
+    max-width: toRem(470);
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline-start: toRem(15);
+    padding-inline-end: toRem(15);
+    width: 100%;
+
+    @include min-screen(sm) {
+        max-width: toRem(540);
+    }
+
+    @include min-screen(md) {
+        max-width: toRem(720);
+    }
+
+    @include min-screen(lg) {
+        max-width: toRem(960);
+    }
+
+    @include min-screen(xl) {
+        max-width: toRem(1038);
+    }
+}
+
+.large-container {
+    max-width: toRem(470);
+    margin: 0 auto;
+    padding-inline-start: toRem(15);
+    padding-inline-end: toRem(15);
+    width: 100%;
+
+    @include min-screen(sm) {
+        max-width: toRem(540);
+    }
+
+    @include min-screen(md) {
+        max-width: toRem(720);
+    }
+
+    @include min-screen(lg) {
+        max-width: toRem(960);
+    }
+
+    @include min-screen(xl) {
+        max-width: toRem(1058);
+    }
+}
