@@ -9,16 +9,16 @@
 
     .text-area {
         width: 33%;
-        padding: 50px;
+        padding: toRem(50);
 
         h1 {
-            font-size: 32px;
+            font-size: toRem(32);
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: toRem(20);
         }
 
         p {
-            font-size: 16px;
+            font-size: toRem(16);
             line-height: 1.5;
         }
 
@@ -28,14 +28,14 @@
 
         @include max-screen(md) {
             width: 100%;
-            padding: 20px;
+            padding: toRem(20);
         }
     }
 
     .image-area {
         width: 67%;
         position: relative;
-
+        
         @include max-screen(lg) {
             width: 60%;
         }
@@ -51,7 +51,7 @@
             object-position: center;
 
             @include max-screen(md) {
-                height: 600px;
+                height: toRem(600);
             }
         }
 
@@ -63,7 +63,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 20px;
+            padding: toRem(20);
 
             .top-section,
             .bottom-section {
@@ -91,21 +91,23 @@
             .bottom-left,
             .bottom-right {
                 p {
-                    font-size: 16px;
+                    font-size: toRem(16);
                     margin: 0;
+                    color: var(--white);
 
                     @include max-screen(md) {
-                        font-size: 14px;
+                        font-size: toRem(13);
                     }
                 }
 
                 h2 {
-                    font-size: 24px;
+                    font-size: toRem(24);
                     font-weight: bold;
-                    margin: 5px 0 0;
+                    margin: toRem(5) 0 0;
+                    color: var(--white);
 
                     @include max-screen(md) {
-                        font-size: 20px;
+                        font-size: toRem(20);
                     }
                 }
 
@@ -116,13 +118,13 @@
 
             .top-right p,
             .bottom-right p {
-                font-size: 19px;
-                color: var(--davy-grey);
+                font-size: toRem(19);
+                color: var(--white);
                 margin: 0;
 
                 @include max-screen(md) {
                     flex-direction: column;
-                    font-size: 16px;
+                    font-size: toRem(16);
                 }
             }
 
@@ -130,19 +132,20 @@
                 list-style: none;
                 padding: 0;
                 margin: 0;
-
+                color: var(--white);
+                
                 li {
                     display: flex;
                     align-items: center;
-                    font-size: 16px;
-                    margin-bottom: 5px;
+                    font-size: toRem(16);
+                    margin-bottom: toRem(5);
 
                     .icon {
-                        margin-right: 5px;
+                        margin-right: toRem(5);
                     }
 
                     @include max-screen(md) {
-                        font-size: 14px;
+                        font-size: toRem(14);
                     }
                 }
             }
@@ -154,8 +157,8 @@
                 .explore-button,
                 .more-info-button {
                     
-                    padding: 10px;
-                    margin: 5px 0;
+                    padding: toRem(10);
+                    margin: toRem(5) 0;
                     background-color: var(--cyan-blue);
                     color: var(--white);
                     text-align: center;
@@ -168,8 +171,8 @@
 
                     @include max-screen(md) {
                         width: 100%;
-                        padding: 8px;
-                        font-size: 14px;
+                        padding: toRem(8);
+                        font-size: toRem(14);
                     }
                 }
             }
