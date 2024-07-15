@@ -28,6 +28,7 @@ $darkestgrey: #352f2f;
 
 $wine: #3f2222;
 $color-black-transparency: rgba(0, 0, 0, .8);
+$right-arrow: '\2192';
 
 
 
@@ -51,6 +52,7 @@ $font-normal:normal;
     --darkestgrey: #352f2f;
     --warm-grey : #edeae4;
     --dark-blue: #353435;
+    --persian-red: #d32f2f;
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
@@ -58,6 +60,8 @@ $font-normal:normal;
     --hero-banner-bg-color: var(--warm-grey);
     --hero-banner-text-color: var(--black);
 
+
+    --color-greyscale-gray-700: #3A4750;
 
 
 }
