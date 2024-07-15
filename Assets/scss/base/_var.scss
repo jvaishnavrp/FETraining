@@ -80,3 +80,30 @@ $font-normal:normal;
     --bg-design-ltbottom-color: var(--dark-blue);
     --bg-design-rtbottom-color: var(--warm-grey);
 }
+
+.bg-theme-blue{
+    --bg-design-bg-color: var(--lightest-blue);
+    --bg-design-title-color: var(--white-smoke);
+    --bg-design-description-color: var(--light-grey);
+    --bg-design-btnbg-color: var(--light-green);
+    --bg-design-rtbottom-color: var(--light-cloudy);
+    --bg-design-ltbottom-color: var(--light-blue);
+}
+
+.bg-theme-red{
+    --bg-design-bg-color: var(--sunset-orange);
+    --bg-design-title-color: var(--white-smoke);
+    --bg-design-description-color: var(--white-beige);
+    --bg-design-btnbg-color: var(--gulf-blue);
+    --bg-design-rtbottom-color: var(--white-smoke-light);
+    --bg-design-ltbottom-color: var(--indian-red);
+}
+
+.bg-theme-green{
+    --bg-design-bg-color: var(--fern-green);
+    --bg-design-title-color: var(--white-smoke);
+    --bg-design-description-color: var(--freezing-vapour);
+    --bg-design-btnbg-color: var(--dark-cyan);
+    --bg-design-rtbottom-color: var(--almosty-whity);
+    --bg-design-ltbottom-color: var(--dark-green);
+}
