@@ -23,8 +23,8 @@
     }
   }
 
-  &__table {
-    .table-row {
+  &__body {
+    .container-row {
       padding: toRem(10);
       display: flex;
       justify-content: center;
@@ -47,9 +47,7 @@
 
       @include min-screen(md) {
         flex-direction: row;
-
-        th,
-        td {
+        .data{
           width: 100%;
         }
       }
