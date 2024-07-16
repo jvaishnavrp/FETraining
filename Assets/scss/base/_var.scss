@@ -49,10 +49,13 @@ $font-normal:normal;
 :root{
     --white:#{$white};
     --black:#{$black};
+    --primary-font:#{$arial};
     --darkestgrey: #352f2f;
     --warm-grey : #edeae4;
     --dark-blue: #353435;
     --persian-red: #d32f2f;
+    --plum: #4a104a;
+    --light-sky-blue: #4bcaf8;
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
@@ -62,6 +65,13 @@ $font-normal:normal;
 
 
     --color-greyscale-gray-700: #3A4750;
+
+    --contact-us-bg-color: var(--plum); 
+    --contact-us-text-color: var(--white);
+    --button-bg-color: var(--white);
+    --button-text-color: var(--plum);
+    --spacing: 16px;
+    --contact-us-title-color: var(--light-sky-blue);
 
 
 }
