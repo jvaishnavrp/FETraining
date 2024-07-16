@@ -1,0 +1,62 @@
+.cmp-custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 1056;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $color-black-transparency;
+  
+    &.show{
+      display: flex;
+      justify-content: center;
+    }
+  
+    &__content {
+      background-color: $white-smoke;
+      margin: auto 24px;
+      text-align: center;
+      padding: 20px 16px;
+      border: 1px solid $grey;
+      border-radius: 12px;
+  
+      @include min-screen(md){
+        margin: auto;
+        max-width: 650px;
+        padding: 24px 40px;
+      }
+
+      &-title{
+        font-weight: bold;
+      }
+
+      &-desc{
+        margin: 12px;
+        @include min-screen(md){
+          font-size: 20px;
+        }
+      }
+
+      &-icon{
+        margin: auto;
+        width: 50px;
+        height: 50px;
+      }
+      &-btn{
+        border-radius: 12px;
+        padding: 4px 28px;
+
+        &:hover{
+          background-color: $black;
+          color: $white-smoke;
+          border: 2px solid $grey;
+        }
+      }
+    }
+  }
+  .popupbtn{
+    margin: 12px 20px;
+  }
