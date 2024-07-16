@@ -51,6 +51,9 @@
         @include min-screen(lg) {
              border-width: toRem(170) toRem(1070) toRem(67) toRem(450);
         }
+        @include min-screen(xl) {
+            border-width: toRem(121) toRem(2650) toRem(84) toRem(530);      
+       }
     }
  
 }
