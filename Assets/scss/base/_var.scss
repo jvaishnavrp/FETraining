@@ -55,6 +55,8 @@ $font-normal:normal;
     --warm-grey : #edeae4;
     --dark-blue: #353435;
     --persian-red: #d32f2f;
+    --white-smoke:#{$white-smoke};
+
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
@@ -64,6 +66,7 @@ $font-normal:normal;
 
 
     --color-greyscale-gray-700: #3A4750;
-
+    --card-bg-color: var(--white);
+    --card--title-color: var(--darkestgrey);
 
 }
