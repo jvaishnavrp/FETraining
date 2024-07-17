@@ -1,16 +1,16 @@
 .cmp-questionnaire {
-  max-width: toRem(1175); 
+  max-width: toRem(1175);
   margin: auto;
 
   @include max-screen(sm) {
     max-width: toRem(767);
     margin: auto;
-   }
+  }
 
-   @include breakpoint-between(sm,md) {
+  @include breakpoint-between(sm, md) {
     max-width: toRem(1199);
     margin: auto;
-   }
+  }
 
   &__container {
     display: flex;
@@ -23,48 +23,47 @@
       height: 164vh;
       overflow: auto;
       background-color: $grey94;
-     }
+    }
 
-     @include breakpoint-between(sm,md) {
+    @include breakpoint-between(sm, md) {
       height: 100vh;
       overflow: auto;
       display: flex;
       flex-direction: column;
-     }
+    }
   }
 
   &__image {
     max-width: 50%;
     height: toRem(590);
 
-  @include max-screen(sm) {
-    max-width: 100%;
-    object-fit: cover;
-   }
+    @include max-screen(sm) {
+      max-width: 100%;
+      object-fit: cover;
+    }
 
-   @include breakpoint-between(sm,md) {
-    max-width: 100%;
-    object-fit: cover;
-   }
-
+    @include breakpoint-between(sm, md) {
+      max-width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__form {
-   margin-block-start: toRem(40);
+    margin-block-start: toRem(40);
     margin-inline: toRem(40) toRem(50);
 
-    @include breakpoint-between(sm,md) {
+    @include breakpoint-between(sm, md) {
       margin-inline-end: toRem(100);
-      }
+    }
   }
 
   &__title {
     text-align: left;
     margin-block-end: toRem(30);
 
-    @include breakpoint-between(sm,md) {
+    @include breakpoint-between(sm, md) {
       text-align: center;
-     }
+    }
   }
 
   &__heading {
@@ -74,18 +73,17 @@
     font-weight: $font-bold;
     font-style: normal;
     color: $black;
-    
+
     @include max-screen(sm) {
       font-size: toRem(33);
       font-weight: 400;
     }
 
-    @include breakpoint-between(sm,md) {
+    @include breakpoint-between(sm, md) {
       text-align: center;
       font-size: toRem(60);
       font-weight: 500;
-     }
-
+    }
   }
 
   &__content {
@@ -95,29 +93,26 @@
     font-size: toRem(16);
     color: $black;
 
-    @include breakpoint-between(sm,md) {
+    @include breakpoint-between(sm, md) {
       text-align: center;
       font-size: toRem(24);
       font-weight: 400;
-     }
-
+    }
   }
 
-  &__fields
-  {
+  &__fields {
     display: flex;
     flex-direction: column;
     text-align: left;
 
-    @include breakpoint-between(sm,md) {
-     display: flex;
-     flex-direction: column;
-    align-items: center;
-     }
+    @include breakpoint-between(sm, md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  &__inputfields
-  {
+  &__inputfields {
     display: grid;
     grid-template-columns: toRem(250) toRem(250);
     column-gap: toRem(25);
@@ -125,131 +120,157 @@
 
     @include max-screen(sm) {
       display: grid;
-      grid-template-columns: toRem(330);  
+      grid-template-columns: toRem(330);
       row-gap: toRem(20);
     }
 
-     &__firstlabel
-     {
-     display: grid;
-     grid-template-rows: toRem(30) toRem(30);
-     }
-
-    &__lastlabel
-    {
-     display: grid;
-     grid-template-rows: toRem(30) toRem(30); 
+    &__firstlabel {
+      display: grid;
+      grid-template-rows: toRem(30) toRem(30);
     }
 
-    &__label
-    {
-        font-weight: $font-bold;
+    &__lastlabel {
+      display: grid;
+      grid-template-rows: toRem(30) toRem(30);
     }
 
-    &__textfield
-    {   background-color:$grey94;
+    &__label {
+      font-weight: $font-bold;
+    }
+
+    &__textfield {
+      background-color: $grey94;
+      width: 100%;
+      padding: toRem(12) toRem(20);
+      margin-block: toRem(8);
+      box-sizing: border-box;
+      border: none;
+      border-bottom: toRem(2) solid $black;
+    }
+
+    &__comments {
+      text-wrap: nowrap;
+      font-size: toRem(14);
+    }
+
+    &__message {
+      height: toRem(100);
+      background-color: $grey94;
+      width: 210%;
+      padding: toRem(12) toRem(20);
+      margin-block: toRem(8);
+      box-sizing: border-box;
+      border: none;
+      border-bottom: toRem(2) solid $black;
+
+      @include max-screen(sm) {
         width: 100%;
-        padding: toRem(12) toRem(20);
-        margin-block: toRem(8);
-        box-sizing: border-box;
-        border: none;
-        border-bottom: toRem(2) solid $black;
+      }
     }
 
-    &__comments
-    {
-        text-wrap: nowrap;
-        font-size: toRem(14);
-    
-    }
+    &__contactsection {
+      display: grid;
+      position: relative;
+      top: toRem(6);
+      grid-template-columns: toRem(250) toRem(200);
 
-    &__message
-    {
-        height: toRem(100);
-        background-color: $grey94;
-        width: 210%;
-        padding: toRem(12) toRem(20);
-        margin-block: toRem(8);
-        box-sizing: border-box;
-        border: none;
-        border-bottom: toRem(2) solid $black;
-
-        @include max-screen(sm) {
-          width: 100%;
-          
-        }
-    }
-
-    &__contactsection
-    {
+      @include max-screen(sm) {
         display: grid;
+        grid-template-columns: toRem(330);
+        row-gap: toRem(24);
+      }
+
+      @include breakpoint-between(sm, md) {
         position: relative;
-        top: toRem(6);
-        grid-template-columns: toRem(250) toRem(200);
-
-        @include max-screen(sm) {
-          display: grid;
-          grid-template-columns: toRem(330);  
-          row-gap: toRem(24);
-        }
-
-        @include breakpoint-between(sm,md) {
-         position: relative;
-         right: toRem(45);  
-        }
+        right: toRem(45);
+      }
     }
 
-    &__contact
-    {
+    &__contact {
       @include max-screen(sm) {
         margin-inline-end: toRem(20);
-        }
+      }
     }
 
-    &__checkmark :after {
-        content: "";
-        position: absolute;
-        display: none;
-      }
+    &__parentcheck {
+      display: inline-flex;
+    }
 
-    &__contact input[type="checkbox"] {
-        appearance: none;
-        align-self: center;
-        width: toRem(10);
-        height: toRem(10);
-        border: toRem(1) solid $black;
-        background-color: $grey94;
-      }
+    &__checkbox input[type="checkbox"] {
+      opacity: 0;
+    }
 
-    &__contact [type="checkbox"]:checked{
-        background-color: $purple;
-        background-image: url("../../images/icons8-check.svg");
-      }
+    &__checkbox label::before {
+      content: "";
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      border: 1px solid;
+    }
 
+    &__checkbox label::after {
+      content: "";
+      display: inline-block;
+      height: 6px;
+      width: 9px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+      transform: rotate(-45deg);
+      color: white;
+    }
 
-    &__submit
-    {
-       background-color:$purple;
-       color: $white;
-       width: toRem(220);
-       height: toRem(46);
-       border-radius: toRem(6);
-       cursor: pointer;
+    &__checkbox label {
+      position: relative;
+    }
 
-       @include max-screen(sm) {
+    &__checkbox label::before,
+    &__checkbox label::after {
+      position: absolute;
+    }
+    /*Outer-box*/
+    &__checkbox label::before {
+      left: -20px;
+      top: 3px;
+    }
+    /*Checkmark*/
+    &__checkbox label::after {
+      left: -16px;
+      top: 7px;
+    }
+
+    /*Hide the checkmark by default*/
+    &__checkbox input[type="checkbox"] + label::after {
+      content: none;
+    }
+    /*Unhide the checkmark on the checked state*/
+    &__checkbox input[type="checkbox"]:checked + label::after {
+      content: "";
+    }
+
+    /*Adding focus styles on the outer-box of the fake checkbox*/
+    &__checkbox input[type="checkbox"]:focus + label::before {
+      background-color: $purple;
+    }
+
+    
+    &__submit {
+      background-color: $purple;
+      color: $white;
+      width: toRem(220);
+      height: toRem(46);
+      border-radius: toRem(6);
+      cursor: pointer;
+
+      @include max-screen(sm) {
         width: toRem(335);
         cursor: pointer;
       }
 
-      
-      @include breakpoint-between(sm,md) {
+      @include breakpoint-between(sm, md) {
         position: relative;
-        left: toRem(26);  
+        left: toRem(26);
         cursor: pointer;
-       }
+      }
     }
-
-
   }
-
 }
