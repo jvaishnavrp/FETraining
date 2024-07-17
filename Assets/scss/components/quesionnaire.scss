@@ -1,0 +1,255 @@
+.cmp-questionnaire {
+  max-width: toRem(1175); 
+  margin: auto;
+
+  @include max-screen(sm) {
+    max-width: toRem(767);
+    margin: auto;
+   }
+
+   @include breakpoint-between(sm,md) {
+    max-width: toRem(1199);
+    margin: auto;
+   }
+
+  &__container {
+    display: flex;
+    background-color: $grey94;
+    height: toRem(590);
+
+    @include max-screen(sm) {
+      display: flex;
+      flex-direction: column;
+      height: 164vh;
+      overflow: auto;
+      background-color: $grey94;
+     }
+
+     @include breakpoint-between(sm,md) {
+      height: 100vh;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+     }
+  }
+
+  &__image {
+    max-width: 50%;
+    height: toRem(590);
+
+  @include max-screen(sm) {
+    max-width: 100%;
+    object-fit: cover;
+   }
+
+   @include breakpoint-between(sm,md) {
+    max-width: 100%;
+    object-fit: cover;
+   }
+
+  }
+
+  &__form {
+   margin-block-start: toRem(40);
+    margin-inline: toRem(40) toRem(50);
+
+    @include breakpoint-between(sm,md) {
+      margin-inline-end: toRem(100);
+      }
+  }
+
+  &__title {
+    text-align: left;
+    margin-block-end: toRem(30);
+
+    @include breakpoint-between(sm,md) {
+      text-align: center;
+     }
+  }
+
+  &__heading {
+    line-height: 1.32;
+    text-wrap: balance;
+    font-size: toRem(24);
+    font-weight: $font-bold;
+    font-style: normal;
+    color: $black;
+    
+    @include max-screen(sm) {
+      font-size: toRem(33);
+      font-weight: 400;
+    }
+
+    @include breakpoint-between(sm,md) {
+      text-align: center;
+      font-size: toRem(60);
+      font-weight: 500;
+     }
+
+  }
+
+  &__content {
+    margin-block-start: toRem(8);
+    line-height: 1.4;
+    text-wrap: balance;
+    font-size: toRem(16);
+    color: $black;
+
+    @include breakpoint-between(sm,md) {
+      text-align: center;
+      font-size: toRem(24);
+      font-weight: 400;
+     }
+
+  }
+
+  &__fields
+  {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    @include breakpoint-between(sm,md) {
+     display: flex;
+     flex-direction: column;
+    align-items: center;
+     }
+  }
+
+  &__inputfields
+  {
+    display: grid;
+    grid-template-columns: toRem(250) toRem(250);
+    column-gap: toRem(25);
+    margin-block: toRem(10);
+
+    @include max-screen(sm) {
+      display: grid;
+      grid-template-columns: toRem(330);  
+      row-gap: toRem(20);
+    }
+
+     &__firstlabel
+     {
+     display: grid;
+     grid-template-rows: toRem(30) toRem(30);
+     }
+
+    &__lastlabel
+    {
+     display: grid;
+     grid-template-rows: toRem(30) toRem(30); 
+    }
+
+    &__label
+    {
+        font-weight: $font-bold;
+    }
+
+    &__textfield
+    {   background-color:$grey94;
+        width: 100%;
+        padding: toRem(12) toRem(20);
+        margin-block: toRem(8);
+        box-sizing: border-box;
+        border: none;
+        border-bottom: toRem(2) solid $black;
+    }
+
+    &__comments
+    {
+        text-wrap: nowrap;
+        font-size: toRem(14);
+    
+    }
+
+    &__message
+    {
+        height: toRem(100);
+        background-color: $grey94;
+        width: 210%;
+        padding: toRem(12) toRem(20);
+        margin-block: toRem(8);
+        box-sizing: border-box;
+        border: none;
+        border-bottom: toRem(2) solid $black;
+
+        @include max-screen(sm) {
+          width: 100%;
+          
+        }
+    }
+
+    &__contactsection
+    {
+        display: grid;
+        position: relative;
+        top: toRem(6);
+        grid-template-columns: toRem(250) toRem(200);
+
+        @include max-screen(sm) {
+          display: grid;
+          grid-template-columns: toRem(330);  
+          row-gap: toRem(24);
+        }
+
+        @include breakpoint-between(sm,md) {
+         position: relative;
+         right: toRem(45);  
+        }
+    }
+
+    &__contact
+    {
+      @include max-screen(sm) {
+        margin-inline-end: toRem(20);
+        }
+    }
+
+    &__checkmark :after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+    &__contact input[type="checkbox"] {
+        appearance: none;
+        align-self: center;
+        width: toRem(10);
+        height: toRem(10);
+        border: toRem(1) solid $black;
+        background-color: $grey94;
+      }
+
+    &__contact [type="checkbox"]:checked{
+        background-color: $purple;
+        background-image: url("../../images/icons8-check.svg");
+      }
+
+
+    &__submit
+    {
+       background-color:$purple;
+       color: $white;
+       width: toRem(220);
+       height: toRem(46);
+       border-radius: toRem(6);
+       cursor: pointer;
+
+       @include max-screen(sm) {
+        width: toRem(335);
+        cursor: pointer;
+      }
+
+      
+      @include breakpoint-between(sm,md) {
+        position: relative;
+        left: toRem(26);  
+        cursor: pointer;
+       }
+    }
+
+
+  }
+
+}
