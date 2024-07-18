@@ -4,29 +4,24 @@
 
   @include max-screen(sm) {
     max-width: toRem(767);
-    margin: auto;
   }
 
   @include breakpoint-between(sm, md) {
     max-width: toRem(1199);
-    margin: auto;
   }
 
   &__container {
     display: flex;
     background-color: $grey94;
-    height: toRem(590);
 
     @include max-screen(sm) {
       display: flex;
       flex-direction: column;
-      height: 164vh;
       overflow: auto;
       background-color: $grey94;
     }
 
     @include breakpoint-between(sm, md) {
-      height: 100vh;
       overflow: auto;
       display: flex;
       flex-direction: column;
@@ -35,7 +30,6 @@
 
   &__image {
     max-width: 50%;
-    height: toRem(590);
 
     @include max-screen(sm) {
       max-width: 100%;
@@ -58,7 +52,7 @@
   }
 
   &__title {
-    text-align: left;
+    text-align: start;
     margin-block-end: toRem(30);
 
     @include breakpoint-between(sm, md) {
@@ -114,7 +108,7 @@
 
   &__inputfields {
     display: grid;
-    grid-template-columns: toRem(250) toRem(250);
+    grid-template-columns: repeat(2, toRem(250));
     column-gap: toRem(25);
     margin-block: toRem(10);
 
@@ -126,12 +120,12 @@
 
     &__firstlabel {
       display: grid;
-      grid-template-rows: toRem(30) toRem(30);
+      grid-template-rows: repeat(2,toRem(30));
     }
 
     &__lastlabel {
       display: grid;
-      grid-template-rows: toRem(30) toRem(30);
+      grid-template-rows: repeat(2,toRem(30));
     }
 
     &__label {
@@ -154,7 +148,6 @@
     }
 
     &__message {
-      height: toRem(100);
       background-color: $grey94;
       width: 210%;
       padding: toRem(12) toRem(20);
@@ -196,63 +189,42 @@
       display: inline-flex;
     }
 
-    &__checkbox input[type="checkbox"] {
-      opacity: 0;
+    &__contact{
+
+      @include breakpoint-between(sm, md) {
+        margin-inline-end: 20px;
+        cursor: pointer;
+      }
     }
 
-    &__checkbox label::before {
-      content: "";
-      display: inline-block;
-      height: 16px;
-      width: 16px;
-      border: 1px solid;
-    }
-
-    &__checkbox label::after {
-      content: "";
-      display: inline-block;
-      height: 6px;
-      width: 9px;
-      border-left: 2px solid;
-      border-bottom: 2px solid;
-      transform: rotate(-45deg);
-      color: white;
-    }
-
-    &__checkbox label {
-      position: relative;
-    }
-
-    &__checkbox label::before,
-    &__checkbox label::after {
-      position: absolute;
-    }
-    /*Outer-box*/
-    &__checkbox label::before {
-      left: -20px;
-      top: 3px;
-    }
-    /*Checkmark*/
-    &__checkbox label::after {
-      left: -16px;
-      top: 7px;
-    }
-
-    /*Hide the checkmark by default*/
-    &__checkbox input[type="checkbox"] + label::after {
-      content: none;
-    }
-    /*Unhide the checkmark on the checked state*/
-    &__checkbox input[type="checkbox"]:checked + label::after {
-      content: "";
-    }
-
-    /*Adding focus styles on the outer-box of the fake checkbox*/
-    &__checkbox input[type="checkbox"]:focus + label::before {
-      background-color: $purple;
-    }
-
+   &__parentcheck label {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
     
+      input[type="checkbox"] {
+        appearance: none;
+        border: 1px solid black;
+        border-radius: 0.25rem;
+        aspect-ratio: 1/1;
+        height: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        overflow: hidden;
+    
+        &:checked {
+          &::after {
+            content: "✓";
+            background-color: $purple;
+            width: -webkit-fill-available;
+          }
+        }
+      }
+    }
+
     &__submit {
       background-color: $purple;
       color: $white;
