@@ -180,3 +180,19 @@ $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
     border: none;
     border-bottom: 1px solid $bordercolor;
 }
+
+@mixin button-styles {
+    padding: toRem(12) toRem(64);
+    margin: toRem(5) 0;
+    text-align: center;
+    text-decoration: none;
+    border: toRem(2) solid var(--white);
+    border-radius: toRem(5);
+    font-size: toRem(12);
+
+    @include max-screen(md) {
+        width: 100%;
+        padding: toRem(8);
+        font-size: toRem(14);
+    }
+}
