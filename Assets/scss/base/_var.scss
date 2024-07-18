@@ -72,7 +72,18 @@ $font-normal:normal;
     --dark-green: #008982;
     --persian-red: #d32f2f;
     --white-smoke:#{$white-smoke};
-
+    --magenta-pink:#{$magenta-pink};
+    --dark-red:#{$dark-red};
+    --dark-orange:#{$dark-orange};
+    --kingly-cloud:#{$kingly-cloud};
+    --burlywood:#{$burlywood};
+    --cyan-blue: #007bff;
+    --cobalt: #0056b3;
+    --davy-grey: #555;
+    --super-silver: #eee;
+    --light-gray: #ccc;
+    --sonic-silver: #757575;
+    --ghost-white: #f9f9f9;
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
@@ -90,6 +101,13 @@ $font-normal:normal;
     --color-greyscale-gray-700: #3A4750;
     --card-bg-color: var(--white);
     --card--title-color: var(--darkestgrey);
+
+    --profile-card-light-background-color: var(--magenta-pink);
+    --profile-card-dark-background-color: var(--dark-red);
+    --profile-card-background-color: var(--white);
+    --profile-card-hover-background-color: var(--kingly-cloud);
+    --profile-card-hover-light-background-color: var(--dark-orange);
+    --profile-card-hover-dark-background-color: var(--burlywood);
 
 }
 
