@@ -1,0 +1,66 @@
+.cmp-masonry-layout {
+  background-color: var(--gray92);
+
+  &__content {
+    max-width: toRem(1200);
+    margin: 0 auto;
+    column-count: 1;
+
+    @include min-screen(sm) {
+      column-count: 3;
+      column-gap: toRem(32);
+      padding: toRem(28) toRem(40);
+    }
+  }
+
+  &__card {
+    border-top: toRem(8) solid var(--purple);
+    background-color: var(--white);
+    margin: 0;
+    break-inside: avoid;
+    margin-bottom: toRem(32);
+
+    &__image-wrapper {
+      width: 100%;
+
+      .cmp-masonry-layout__card-image {
+        width: 100%;
+      }
+    }
+
+    &__details {
+      padding: toRem(20);
+
+      &-quote {
+        font-size: toRem(16);
+        padding-bottom: toRem(20);
+      }
+
+      &-author-details {
+        font-size: toRem(12);
+        text-transform: capitalize;
+        padding: toRem(20) 0;
+      }
+
+      &-city {
+        color: var(--purple);
+        text-transform: uppercase;
+        letter-spacing: toRem(1);
+        font-weight: 800;
+
+        &::before {
+          content: "|";
+        }
+      }
+    }
+  }
+}
+
+// theme variation
+.cmp-masonry-layout {
+  &.blue-border-theme {
+    .cmp-masonry-layout__card {
+      border-top: toRem(8) solid var(--megaman);
+    }
+  }
+}
