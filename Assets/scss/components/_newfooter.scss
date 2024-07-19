@@ -1,124 +1,140 @@
-.cmp-new-footer{
+.cmp-new-footer {
     background-color: $color-grey-silver;
     padding: 0 toRem(24);
 
-    &__main-container{
-        max-width: toRem(768);
+    &__main-container {
+        max-width: 768px;
         margin: 0 auto;
         padding: toRem(48) 0;
 
-        @include min-screen(xl){
-            max-width: toRem(1440);
+        @include min-screen(xl) {
+            max-width: 1440px;
         }
     }
 
-    &__top-section{
+    &__top-section {
         display: flex;
         flex-direction: column;
         text-align: center;
-        &-items{
+
+        &-items {
             padding: toRem(36) 0 0;
-            @include min-screen(xl){
+
+            @include min-screen(xl) {
                 width: 25%;
                 padding: 0 toRem(24);
                 text-align: left;
             }
         }
 
-        @include min-screen(xl){
+        @include min-screen(xl) {
             flex-direction: row;
             width: calc(100% + toRem(48));
             margin: 0 toRem(-24);
         }
     }
-    &__title{
+
+    &__title {
         font-size: toRem(16);
         color: $color-nero;
         padding-block-end: toRem(12);
         text-transform: uppercase;
     }
-    &__link-section{
-        padding: toRem(16) 0 !important;
-        &.two-section{
+
+    &__link-section {
+
+        &.two-section {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            .cmp-new-footer__link-item{
+
+            .cmp-new-footer__link-item {
                 width: 50%;
                 padding-inline-end: toRem(20);
             }
         }
     }
-    &__link-item{
+
+    ul.cmp-new-footer__link-section{
+        padding: toRem(16) 0;
+    }
+
+    &__link-item {
         align-items: center;
         font-size: toRem(16);
         padding-block-end: toRem(16);
-        a{
+
+        a {
             text-decoration: none;
             color: $color-nero;
-            &:hover{
+
+            &:hover {
                 text-decoration: underline;
             }
         }
     }
-    &__logo-item{
+
+    &__logo-item {
         width: toRem(76);
         object-fit: contain;
     }
-    &__logo-section{
+
+    &__logo-section {
         display: flex;
         justify-content: center;
         align-items: baseline;
 
-        a{
+        a {
             padding: 0 toRem(20);
         }
 
-        @include min-screen(xl){
+        @include min-screen(xl) {
             justify-content: space-between;
 
-            a{
+            a {
                 padding: 0;
             }
         }
     }
 
-    &__buttom-section{
-        @include min-screen(xl){
+    &__buttom-section {
+        @include min-screen(xl) {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
     }
 
-    &__buttom-start-section{
+    &__buttom-start-section {
 
-        @include min-screen(xl){
+        @include min-screen(xl) {
             display: flex;
             margin: 0 toRem(-32);
         }
-        &-items{
+
+        &-items {
             display: flex;
             align-items: center;
             padding: toRem(8) 0;
             justify-content: center;
 
-            @include min-screen(xl){
+            @include min-screen(xl) {
                 padding: toRem(12) toRem(32);
                 justify-content: left;
             }
         }
     }
 
-    &__logo-container{
+    &__logo-container {
         color: $color-nero;
-        @include min-screen(xl){
+
+        @include min-screen(xl) {
             display: block;
             width: toRem(200);
         }
     }
 
-    &__logo{
+    &__logo {
         height: toRem(32);
         object-fit: contain;
         padding-inline-end: toRem(20);
@@ -126,55 +142,62 @@
 
     }
 
-    &__social-items{
+    &__social-items {
         display: flex;
         flex-direction: row;
         padding: 0 toRem(20);
         width: calc(100% + toRem(24));
         margin: 0 toRem(-12);
 
-        @include min-screen(xl){
+        @include min-screen(xl) {
             align-items: center;
         }
     }
 
-    &__social-item{
+    &__social-item {
         padding: 0 toRem(6);
         max-width: fit-content;
-        @include min-screen(xl){
+
+        @include min-screen(xl) {
             padding: 0 toRem(8);
-            &:hover{
+
+            &:hover {
                 transform: scale(1.2, 1.2)
             }
         }
     }
 
-    &__buttom-end-section{
+    &__buttom-end-section {
         display: flex;
         align-items: center;
         flex-direction: column;
-        &-item{
+
+        &-item {
             font-size: toRem(10);
             text-transform: uppercase;
         }
-        .cmp-new-footer__link-section{
+
+        .cmp-new-footer__link-section {
             display: flex;
             width: calc(100% + toRem(12));
             margin: 0 toRem(-6);
         }
-        .cmp-new-footer__link-item{
+
+        .cmp-new-footer__link-item {
             padding: 0 toRem(6);
             position: relative;
             font-size: toRem(10);
             text-transform: none;
-            a{
+
+            a {
                 text-decoration: underline;
-                &:hover{
+
+                &:hover {
                     text-decoration: none;
                 }
             }
 
-            &::after{
+            &::after {
                 content: "";
                 height: 40%;
                 display: block;
@@ -183,12 +206,13 @@
                 inset-inline-end: 0;
                 border-inline-end: toRem(1) solid;
             }
-            &:nth-last-child(1){
-                &::after{
+
+            &:nth-last-child(1) {
+                &::after {
                     display: none;
                 }
             }
         }
     }
-        
+
 }
