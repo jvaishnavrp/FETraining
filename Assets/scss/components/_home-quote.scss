@@ -1,14 +1,14 @@
 .component-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: toRem(20);
     font-family: $openSans;
 
     @include max-screen(lg) {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .text-area {
-        width: 33%;
         padding: toRem(96);
 
         h1 {
@@ -23,13 +23,11 @@
         }
 
         @include max-screen(lg) {
-            width: 100%;
             padding: toRem(20);
         }
     }
 
     .image-area {
-        width: 67%;
         position: relative;
         z-index: 1;
 
@@ -60,7 +58,6 @@
         }
 
         @include max-screen(lg) {
-            width: 100%;
             height: toRem(600);
         }
 
@@ -150,10 +147,10 @@
                     display: flex;
                     align-items: center;
                     font-size: toRem(16);
-                    margin-bottom: toRem(5);
+                    margin-block-end: toRem(5);
 
                     .icon {
-                        margin-right: toRem(5);
+                        margin-inline-end: toRem(5);
                     }
 
                     @include max-screen(md) {

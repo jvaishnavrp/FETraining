@@ -182,13 +182,14 @@ $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
 }
 
 @mixin button-styles {
-    padding: toRem(12) toRem(64);
-    margin: toRem(5) 0;
+    padding-block: toRem(12);
+    margin-block: toRem(5);
     text-align: center;
     text-decoration: none;
     border: toRem(2) solid var(--white);
     border-radius: toRem(5);
     font-size: toRem(12);
+    min-width: toRem(288);
 
     @include max-screen(md) {
         width: 100%;
