@@ -1,24 +1,30 @@
 .cmp-masonry-layout {
+  --border-top-clr:var(--purple);
   background-color: var(--gray92);
 
   &__content {
     max-width: toRem(1200);
-    margin: 0 auto;
+    margin-inline: auto;
     column-count: 1;
 
     @include min-screen(sm) {
-      column-count: 3;
+      column-count: 2;
       column-gap: toRem(32);
-      padding: toRem(28) toRem(40);
+      padding-block: toRem(28) ;
+      padding-inline: toRem(40);
+    }
+
+    @include min-screen(lg) {
+      column-count: 3;
     }
   }
 
   &__card {
-    border-top: toRem(8) solid var(--purple);
+    border-block-start: toRem(8) solid var(--border-top-clr);
     background-color: var(--white);
     margin: 0;
     break-inside: avoid;
-    margin-bottom: toRem(32);
+    margin-block-end: toRem(32);
 
     &__image-wrapper {
       width: 100%;
@@ -33,13 +39,13 @@
 
       &-quote {
         font-size: toRem(16);
-        padding-bottom: toRem(20);
+        padding-block-end: toRem(20);
       }
 
       &-author-details {
         font-size: toRem(12);
         text-transform: capitalize;
-        padding: toRem(20) 0;
+        padding-block: toRem(20);
       }
 
       &-city {
@@ -57,10 +63,7 @@
 }
 
 // theme variation
-.cmp-masonry-layout {
-  &.blue-border-theme {
-    .cmp-masonry-layout__card {
-      border-top: toRem(8) solid var(--megaman);
-    }
+
+  .blue-border-theme {
+    --border-top-clr: var(--megaman); 
   }
-}
