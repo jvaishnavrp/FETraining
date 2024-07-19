@@ -14,7 +14,7 @@
         h1 {
             font-size: toRem(32);
             font-weight: bold;
-            margin-bottom: toRem(20);
+            margin-block-end: toRem(20);
         }
 
         p {
@@ -112,7 +112,7 @@
                 h2 {
                     font-size: toRem(24);
                     font-weight: bold;
-                    margin: toRem(5) 0 0;
+                    margin-block-start: toRem(5);
                     color: var(--white);
 
                     @include max-screen(md) {
