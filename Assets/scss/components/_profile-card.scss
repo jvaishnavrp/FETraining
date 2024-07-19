@@ -1,4 +1,13 @@
 .cmp-profile-card {
+    //Variables
+
+    --profile-card-light-background-color: var(--magenta-pink);
+    --profile-card-dark-background-color: var(--dark-red);
+    --profile-card-background-color: var(--white);
+    --profile-card-hover-background-color: var(--kingly-cloud);
+    --profile-card-hover-light-background-color: var(--dark-orange);
+    --profile-card-hover-dark-background-color: var(--burlywood);
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,18 +87,18 @@
 
             &__title,
             &__company {
-                margin: toRem(5) 0;
+                margin-block: toRem(5);
                 font-size: toRem(16);
                 color: var(--sonic-silver);
             }
 
             &__social {
-                padding: toRem(10) 0;
+                padding-block: toRem(10);
                 background: var(--ghost-white);
                 border-top: toRem(1) solid var(--super-silver);
 
                 a {
-                    margin: 0 toRem(10);
+                    margin-inline: toRem(10);
                     color: var(--sonic-silver);
                     font-size: toRem(20);
                     text-decoration: none;
