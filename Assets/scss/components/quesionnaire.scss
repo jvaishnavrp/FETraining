@@ -12,13 +12,13 @@
 
   &__container {
     display: flex;
-    background-color: $grey94;
+    background-color: var( --light-grey);
 
     @include max-screen(sm) {
       display: flex;
       flex-direction: column;
       overflow: auto;
-      background-color: $grey94;
+      background-color: var( --light-grey);
     }
 
     @include breakpoint-between(sm, md) {
@@ -66,7 +66,7 @@
     font-size: toRem(24);
     font-weight: $font-bold;
     font-style: normal;
-    color: $black;
+    color: var(--black);
 
     @include max-screen(sm) {
       font-size: toRem(33);
@@ -133,7 +133,7 @@
     }
 
     &__textfield {
-      background-color: $grey94;
+      background-color: var( --light-grey);
       width: 100%;
       padding: toRem(12) toRem(20);
       margin-block: toRem(8);
@@ -148,7 +148,7 @@
     }
 
     &__message {
-      background-color: $grey94;
+      background-color: var( --light-grey);
       width: 210%;
       padding: toRem(12) toRem(20);
       margin-block: toRem(8);
@@ -190,6 +190,8 @@
     }
 
     &__contact{
+       
+      margin-inline-end: 10px;
 
       @include breakpoint-between(sm, md) {
         margin-inline-end: 20px;
