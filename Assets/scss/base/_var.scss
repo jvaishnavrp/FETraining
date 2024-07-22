@@ -74,7 +74,8 @@ $font-normal:normal;
     --dark-green: #008982;
     --persian-red: #d32f2f;
     --white-smoke:#{$white-smoke};
-
+    --half-width:40%;
+    --full-width:100%;
 
     --banner-bg-color: var(--darkestgrey);
     --banner-text-color: var(--white);
@@ -92,6 +93,13 @@ $font-normal:normal;
     --color-greyscale-gray-700: #3A4750;
     --card-bg-color: var(--white);
     --card--title-color: var(--darkestgrey);
+
+    --bg-banner-bg-theme-color:var(--warm-grey);
+    --bg-banner-title-color: var(--dark-blue);
+    --bg-banner-description-color: var(--dark-blue);
+    --bg-banner-btn-color: var(--white);
+    --bg-banner-btnbg-color: var(--dark-blue);
+    --bg-banner-logo-width:var(--full-width);
 
 }
 
@@ -121,3 +129,6 @@ $font-normal:normal;
     --bg-design-rtbottom-color: var(--almosty-whity);
     --bg-design-ltbottom-color: var(--dark-green);
 }
+
+
+
