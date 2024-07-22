@@ -1,5 +1,8 @@
 .home-container {
   background-image: url("../../images/hero-container-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   &__inner {
     display: flex;
