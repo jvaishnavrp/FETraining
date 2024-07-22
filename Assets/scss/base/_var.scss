@@ -25,6 +25,8 @@ $burlywood: #deb887;
 $darkgray: #a9a9a9;
 $grey80: #808080;
 $darkestgrey: #352f2f;
+$gradientgrey: #353435;
+$warmgrey:#edeae4;
 
 $wine: #3f2222;
 $color-black-transparency: rgba(0, 0, 0, .8);
@@ -73,6 +75,8 @@ $font-normal:normal;
     --persian-red: #d32f2f;
     --navy-blue: #0050ff;
     --white-smoke:#{$white-smoke};
+    --half-width:40%;
+    --full-width:100%;
     --magenta-pink:#{$magenta-pink};
     --dark-red:#{$dark-red};
     --dark-orange:#{$dark-orange};
@@ -112,6 +116,13 @@ $font-normal:normal;
     --card-bg-color: var(--white);
     --card--title-color: var(--darkestgrey);
 
+    --bg-banner-bg-theme-color:var(--warm-grey);
+    --bg-banner-title-color: var(--dark-blue);
+    --bg-banner-description-color: var(--dark-blue);
+    --bg-banner-btn-color: var(--white);
+    --bg-banner-btnbg-color: var(--dark-blue);
+    --bg-banner-logo-width:var(--full-width);
+
 }
 
 .bg-theme-blue{
@@ -140,3 +151,6 @@ $font-normal:normal;
     --bg-design-rtbottom-color: var(--almosty-whity);
     --bg-design-ltbottom-color: var(--dark-green);
 }
+
+
+

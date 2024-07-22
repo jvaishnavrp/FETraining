@@ -1,0 +1,116 @@
+.sub-banner-container {
+    position: relative;
+    z-index: 0;
+    background-color: var(--bg-banner-bg-theme-color);
+
+    @include max-screen(sm)
+    {
+        width: max-content;
+    }
+
+  &__content {
+    width: toRem(700);
+    margin: auto;
+    text-align: center;
+    padding: toRem(64);
+}
+
+
+  &__pretitle
+  {
+    color: var(--bg-banner-title-color);
+  }
+
+  &__title
+  {
+    color:var(--bg-banner-title-color);
+    font-size: toRem(35);
+    font-weight: 400;
+  }
+
+  &__desc
+  {
+    color:var(--bg-banner-title-color);
+  }
+
+  &__button
+  {
+    margin-block: toRem(29);
+    background-color: var(--bg-banner-btnbg-color);
+    color: var(--bg-banner-btn-color);
+    border-radius: toRem(41);
+    padding-block: toRem(10); 
+    padding-inline: toRem(17);
+    
+  }
+
+  & img{
+    @include banner-logo-width(var(--bg-banner-logo-width));
+    height: 100%;
+  }
+
+  &__banner-logo
+  {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  &.bg-light-theme{
+    --bg-banner-bg-theme-color:var(--warm-grey);
+    --bg-banner-title-color: var(--dark-blue);
+    --bg-banner-description-color: var(--dark-blue);
+    --bg-banner-btn-color: var(--white);
+    --bg-banner-btnbg-color: var(--dark-blue);
+    --bg-banner-logo-width:var(--half-width);
+  
+    img{
+      @include banner-logo-width(var(--bg-banner-logo-width));
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .sub-banner-container__banner-logo{
+     position: absolute;
+     z-index: -1;
+     top: 0;
+     right: 0;
+   }
+    
+  }
+  
+
+  &.bg-dark-theme{
+    --bg-banner-bg-theme-color:var(--dark-blue);
+    --bg-banner-title-color: var(--white);
+    --bg-banner-btn-color: var(--dark-blue);
+    --bg-banner-btnbg-color: var(--white);
+    --bg-banner-logo-width:var(--half-width);
+    
+    img{
+      @include banner-logo-width(var(--bg-banner-logo-width));
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .sub-banner-container__banner-logo{
+     position: absolute;
+     z-index: -1;
+     top: 0;
+     right: 0;
+   }
+    
+  }
+
+  .bg-light-gradient{
+    --bg-banner-bg-theme-color:var(--dark-blue);
+    --bg-banner-title-color: var(--white);
+    --bg-banner-btn-color: var(--dark-blue);
+    --bg-banner-btnbg-color: var(--white);
+    --bg-banner-logo-width:var(--full-width);
+  
+  }
+
+}
+

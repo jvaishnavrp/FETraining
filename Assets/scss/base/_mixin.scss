@@ -180,3 +180,8 @@ $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
     border: none;
     border-bottom: 1px solid $bordercolor;
 }
+
+@mixin banner-logo-width($width)
+{
+    width:$width;
+}
