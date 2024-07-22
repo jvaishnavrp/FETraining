@@ -108,10 +108,10 @@ $font-normal:normal;
     --color-greyscale-gray-700: #3A4750;
     --card-bg-color: var(--white);
     --card--title-color: var(--darkestgrey);
-    --list-bg-color: var(--white);
-    --list-text-color: var(--black);
-    --list-link-icon-color: var(--black);
-    --list-showhide-icon-color: var(--black);
+    --list-bg-color: var(--warm-grey);
+    --list-text-color: var(--dark-blue);
+    --list-link-icon-color: var(--persian-red);
+    --list-showhide-icon-color: var(--dark-blue);
 
 }
 
@@ -140,16 +140,4 @@ $font-normal:normal;
     --bg-design-btnbg-color: var(--dark-cyan);
     --bg-design-rtbottom-color: var(--almosty-whity);
     --bg-design-ltbottom-color: var(--dark-green);
-}
-.list-theme-light{
-    --list-bg-color: var(--warm-grey);
-    --list-text-color: var(--dark-blue);
-    --list-link-icon-color: var(--persian-red);
-    --list-showhide-icon-color: var(--dark-blue);
-}
-.list-theme-dark{
-    --list-bg-color: var(--dark-blue);
-    --list-text-color: var(--white);
-    --list-link-icon-color: var(--white);
-    --list-showhide-icon-color: var(--white);
 }

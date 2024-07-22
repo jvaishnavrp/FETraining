@@ -1,6 +1,7 @@
 .list{
     background-color: var(--list-bg-color);
     display: flex;
+    max-inline-size: 100%;
     flex-direction: column;
     font-family: $arial;
     padding-inline: toRem(25);
@@ -96,4 +97,12 @@
             }
         }
     }
+}
+
+
+.list-theme-dark{
+    --list-bg-color: var(--dark-blue);
+    --list-text-color: var(--white);
+    --list-link-icon-color: var(--white);
+    --list-showhide-icon-color: var(--white);
 }
