@@ -53,13 +53,10 @@
   {
     position: absolute;
     z-index: -1;
-    inset: 0;
+    bottom: 0;
     object-fit: cover;
   }
 
-}
-
-.sub-banner-container{
   &.bg-light-theme{
     --bg-banner-bg-theme-color:var(--warm-grey);
     --bg-banner-title-color: var(--dark-blue);
@@ -68,42 +65,52 @@
     --bg-banner-btnbg-color: var(--dark-blue);
     --bg-banner-logo-width:var(--half-width);
   
-    & img{
+    img{
       @include banner-logo-width(var(--bg-banner-logo-width));
       height: 100%;
       object-fit: contain;
     }
 
-    .sub-banner-container__banner-logo
-    {
-      position: absolute;
-      z-index: -1;
-      inset: 0;
-      object-fit: cover;
-    }
+    .sub-banner-container__banner-logo{
+     position: absolute;
+     z-index: -1;
+     top: 0;
+     right: 0;
+   }
+    
   }
-}
+  
 
-
-.sub-banner-container{
   &.bg-dark-theme{
     --bg-banner-bg-theme-color:var(--dark-blue);
     --bg-banner-title-color: var(--white);
     --bg-banner-btn-color: var(--dark-blue);
     --bg-banner-btnbg-color: var(--white);
     --bg-banner-logo-width:var(--half-width);
-  
+    
+    img{
+      @include banner-logo-width(var(--bg-banner-logo-width));
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .sub-banner-container__banner-logo{
+     position: absolute;
+     z-index: -1;
+     top: 0;
+     right: 0;
+   }
     
   }
-}
 
-
-.bg-light-gradient{
-  --bg-banner-bg-theme-color:var(--dark-blue);
-  --bg-banner-title-color: var(--white);
-  --bg-banner-btn-color: var(--dark-blue);
-  --bg-banner-btnbg-color: var(--white);
-  --bg-banner-logo-width:var(--full-width);
+  .bg-light-gradient{
+    --bg-banner-bg-theme-color:var(--dark-blue);
+    --bg-banner-title-color: var(--white);
+    --bg-banner-btn-color: var(--dark-blue);
+    --bg-banner-btnbg-color: var(--white);
+    --bg-banner-logo-width:var(--full-width);
+  
+  }
 
 }
 
