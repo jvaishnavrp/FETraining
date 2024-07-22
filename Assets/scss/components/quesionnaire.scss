@@ -2,10 +2,6 @@
   max-width: toRem(1175);
   margin: auto;
 
-  @include max-screen(sm) {
-    max-width: toRem(767);
-  }
-
   @include breakpoint-between(sm, md) {
     max-width: toRem(1199);
   }
