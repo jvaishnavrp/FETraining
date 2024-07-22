@@ -1,0 +1,126 @@
+.home-container {
+  background-image: url("../../images/hero-container-background.jpg");
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-block: toRem(100);
+    padding-inline: toRem(30);
+
+    @include min-screen(md) {
+      flex-direction: column;
+      gap: toRem(26);
+    }
+
+    @include min-screen(lg) {
+      max-width: toRem(1400);
+      flex-direction: row;
+      gap: toRem(50);
+    }
+
+    .text-container {
+      @include min-screen(lg) {
+        width: 50%;
+      }
+
+      @include min-screen(md) {
+        width: 100%;
+      }
+
+      &__eyebrow-text {
+        color: $white;
+        padding-block: toRem(20);
+
+        @include min-screen(md) {
+          font-size: toRem(20);
+        }
+
+        @include min-screen(lg) {
+          font-size: toRem(24);
+        }
+      }
+
+      &__description {
+        color: $white-smoke;
+        padding-block: toRem(5);
+
+        @include min-screen(md) {
+          font-size: toRem(40);
+        }
+
+        @include min-screen(lg) {
+          font-size: toRem(56);
+        }
+      }
+    }
+
+    .btn-container {
+      width: 100%;
+
+      @include min-screen(lg) {
+        width: 50%;
+      }
+
+      @include min-screen(md) {
+        width: 100%;
+      }
+
+      &__tiles {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: toRem(20);
+        padding-block: toRem(20);
+
+        @include min-screen(md) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: toRem(20);
+        }
+
+        .tile {
+          display: grid;
+          background-color: $royal-blue;
+          padding: toRem(20);
+          transition: all 0.5s ease-out;
+
+          &:hover {
+            background-color: $cornflower-blue;
+            cursor: pointer;
+          }
+
+          @include min-screen(md) {
+            min-height: toRem(110);
+            padding-block: toRem(10);
+            padding-inline: toRem(30);
+          }
+
+          .link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            align-items: center;
+            gap: toRem(5);
+
+            &__title {
+              color: $white;
+
+              @include min-screen(md) {
+                font-size: toRem(26);
+              }
+            }
+
+            &__icon {
+              max-width: 3rem;
+              border-left: toRem(1) solid $white;
+              padding-inline-start: toRem(12);
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
