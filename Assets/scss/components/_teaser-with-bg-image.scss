@@ -1,0 +1,98 @@
+.cmp-teaser-with-bg {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,172,176,1) 0%, rgba(0,212,255,1) 100%);
+    height: toRem(630);
+
+    @include min-screen(md) {
+        position: relative;
+        z-index: -2;
+    }
+
+    &-wrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        z-index: 0;
+
+        &__text {
+            background-color: var(--mint-cream);
+            text-align: left;
+            padding: toRem(30);
+            height: 50%;
+
+            @include min-screen(md) {
+                width: toRem(620);
+                height: auto;
+                padding: toRem(50) toRem(80);
+                box-shadow: 2px 2px 2px var(--white);
+                opacity: 0.9;
+            }
+
+            &-title {
+                font-size: toRem(48);
+                background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,172,176,1) 0%, rgba(0,212,255,1) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                line-height: 0.94;
+                letter-spacing: -3px;
+                font-family: 'Noto Sans';
+                margin-block-end: toRem(20);
+
+                @include min-screen(md) {
+                    font-size: 96px;
+                    line-height: 0.98;
+                }
+            }
+
+            &-description {
+                font-family: 'Noto Sans';
+                font-size: toRem(18);
+                line-height: 1.33;
+                letter-spacing: 0;
+                font-family: sans-serif;
+                color: var(--dusty-grey);
+                margin-block-end: toRem(30);
+                max-width: toRem(500);
+
+                @include min-screen(md) {
+                    font-size: toRem(21);
+                    line-height: 1.43;
+                }
+            }
+
+            &-btn {
+
+                @include hero-banner-button($white, $primary-blue);
+                border-radius: 0;
+                font-size: toRem(16);
+                width: toRem(140);
+
+                @include min-screen(md) {
+                    width: toRem(150);
+                }
+            }
+        }
+
+        &__bg-image {
+            height: 50%;
+
+            @include min-screen(md) {
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                height: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: 95%;
+                object-fit: cover;
+
+                @include min-screen(md) {
+                    height: 98%;
+                }
+            }
+        }
+    }
+}
