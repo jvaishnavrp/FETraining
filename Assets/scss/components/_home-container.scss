@@ -1,60 +1,57 @@
 .home-container {
-  background-image: url("../../images/hero-container-background.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding-block: toRem(100);
-    padding-inline: toRem(30);
+    padding-block: toRem(30);
+    padding-inline: toRem(20);
 
-    @include min-screen(md) {
+    @include min-screen(lg) {
       flex-direction: column;
       gap: toRem(26);
     }
 
-    @include min-screen(lg) {
-      max-width: toRem(1400);
+    @include min-screen(xl) {
+      max-width: toRem(1280);
       flex-direction: row;
-      gap: toRem(50);
+      gap: toRem(60);
     }
 
     .text-container {
-      @include min-screen(lg) {
-        width: 50%;
-      }
-
-      @include min-screen(md) {
-        width: 100%;
-      }
-
       &__eyebrow-text {
-        color: $white;
-        padding-block: toRem(20);
+        color: var(--dark-blue);
+        padding-block: toRem(14);
+        font-size: 1rem;
+        line-height: 1.2;
+        font-weight: 600;
 
-        @include min-screen(md) {
+        @include min-screen(lg) {
           font-size: toRem(20);
         }
 
-        @include min-screen(lg) {
+        @include min-screen(xl) {
           font-size: toRem(24);
         }
       }
 
       &__description {
-        color: $white-smoke;
+        color: var(--dark-blue);
         padding-block: toRem(5);
-
-        @include min-screen(md) {
-          font-size: toRem(40);
-        }
+        font-size: 1.5rem;
+        line-height: 1.2;
+        font-weight: 300;
 
         @include min-screen(lg) {
-          font-size: toRem(56);
+          font-size: toRem(40);
+          max-width: 86%;
+        }
+
+        @include min-screen(xl) {
+          font-size: toRem(48);
         }
       }
     }
@@ -62,40 +59,32 @@
     .btn-container {
       width: 100%;
 
-      @include min-screen(lg) {
-        width: 50%;
-      }
-
-      @include min-screen(md) {
-        width: 100%;
-      }
-
       &__tiles {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: toRem(20);
         padding-block: toRem(20);
 
-        @include min-screen(md) {
+        @include min-screen(lg) {
           grid-template-columns: repeat(2, 1fr);
-          gap: toRem(20);
+          gap: 1.5rem 2.25rem;
         }
 
         .tile {
           display: grid;
-          background-color: $royal-blue;
+          background-color: $brownish-red;
           padding: toRem(20);
           transition: all 0.5s ease-out;
 
           &:hover {
-            background-color: $cornflower-blue;
+            background-color: var(--dark-blue);
             cursor: pointer;
           }
 
-          @include min-screen(md) {
-            min-height: toRem(110);
-            padding-block: toRem(10);
-            padding-inline: toRem(30);
+          @include min-screen(lg) {
+            min-height: toRem(126);
+            padding-block: 0.625rem;
+            padding-inline: 1.5rem;
           }
 
           .link {
@@ -105,20 +94,23 @@
             justify-content: space-between;
             text-decoration: none;
             align-items: center;
-            gap: toRem(5);
+            gap: toRem(14);
 
             &__title {
               color: $white;
+              font-size: 1.125rem;
+              padding-inline-end: 1.5rem;
 
-              @include min-screen(md) {
+              @include min-screen(lg) {
                 font-size: toRem(26);
+                font-weight: 600;;
               }
             }
 
             &__icon {
-              max-width: 3rem;
+              max-width: 3.5rem;
               border-left: toRem(1) solid $white;
-              padding-inline-start: toRem(12);
+              padding-inline-start: toRem(16);
               height: 100%;
             }
           }
