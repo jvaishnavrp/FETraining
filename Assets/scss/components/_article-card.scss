@@ -1,0 +1,94 @@
+.article-cards{
+    background-color: $white-smoke;
+    font-family: $arial;
+    max-width: 100%;
+    margin: 0;
+
+    &__menu{
+        display: flex;
+        padding: toRem(20);
+       
+        &--item{
+            @include article-dropdown-style(var(--white-smoke), var(--black));
+            max-width: toRem(150);
+        }
+        .dropdown-up{
+            @include article-dropdown-style(var(--white-smoke), var(--black));
+        }
+    }
+
+    &__container{
+        max-width: inherit;
+        display: grid;
+        gap: toRem(20);
+        @include min-screen(sm) {
+            padding: 0 toRem(20);
+        }
+        @include min-screen(md) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+        @include min-screen(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__card{
+        background-color: var(--card-bg-color);
+        margin-block-end: toRem(20);
+        &--image{
+            width: toRem(970);
+        }
+        &--detailed{
+            display: flex;
+            margin-inline-start: 1rem;
+            margin-block-start: 1rem;
+            .card-detailed__location{
+                font-weight: $font-bold;
+                color: $wine;
+
+                &::after{
+                    content: "   | ";
+                    padding: 0 toRem(8);
+                }
+
+            }
+            .card--detailed__publishdate{
+                font-size: toRem(12);
+                font-weight: $font-bold;
+                margin-block-start: toRem(4);
+                margin-inline-start: toRem(8);
+
+            }
+
+        }
+        &--title{
+            color: var(--card--title-color);
+            font-size: 2rem;
+            margin: 1rem 1rem;
+        }
+        &--description{
+            margin: 0 1rem;
+            margin-block-end: 2rem;
+            padding-inline-end: 1rem;
+
+            .description-detail{
+                font-size: toRem(14);
+                line-height: 1.571428;
+
+                &--link{
+                    text-decoration: none;
+                    cursor: pointer;
+                    color: $wine;
+
+                    &-btnmore{
+                        border: none;
+                        background: transparent;
+                        color: $wine;
+                        font-size: toRem(10);
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

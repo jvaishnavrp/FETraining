@@ -175,4 +175,8 @@ $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
         box-shadow: 2px 2px 2px $backgroundColor;
     }
 }
-
+@mixin article-dropdown-style($backgroundColor, $bordercolor) {
+    background-color: $backgroundColor;
+    border: none;
+    border-bottom: 1px solid $bordercolor;
+}
