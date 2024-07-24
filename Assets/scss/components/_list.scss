@@ -59,7 +59,7 @@
             column-gap: toRem(20);
 
             .cmp-list__item:nth-child(-n+2) {
-                border-block-start: toRem(1) solid var(--light-gray);
+                border-block-start: toRem(1) solid var(--white);
                 padding-block-start: toRem(30);
             }
         }
@@ -69,7 +69,7 @@
             grid-template-columns: repeat(3, 1fr);;
             
             .cmp-list__item:nth-child(-n+3) {
-                border-block-start: toRem(1) solid var(--light-gray);
+                border-block-start: toRem(1) solid var(--white);
                 padding-block-start: toRem(30);
             }
         }
