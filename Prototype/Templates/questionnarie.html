@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Questionnaire</title>
+   
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../css/style.min.css">
+    <!-- endinject -->
+</head>
+<body>
+   
+    <main id="main">
+        <div class="cmp-questionnaire">
+          <div class="cmp-questionnaire__container">
+            <img
+              class="cmp-questionnaire__image"
+              src="../../images/women-with-laptop.png"
+              alt="Women with daughter"
+            />
+            <form class="cmp-questionnaire__form">
+              <div class="cmp-questionnaire__title">
+                <div class="cmp-questionnaire__heading">Have a Question?</div>
+                <div class="cmp-questionnaire__content">
+                  We're here to answer!Reach out throught the quick form below,on social
+                  media,or use our live chat to talk to someone directly,now!
+                </div>
+              </div>
+              <div class="cmp-questionnaire__fields">
+                <div class="cmp-questionnaire__inputfields">
+                  <div class="cmp-questionnaire__inputfields__firstlabel">
+                    <label class="cmp-questionnaire__inputfields__label"
+                      >First Name</label
+                    >
+                    <input
+                      class="cmp-questionnaire__inputfields__textfield"
+                      type="text"
+                      placeholder="Enter Your First Name"
+                      id="fname"
+                      name="fname"
+                      required
+                    />
+                  </div>
+                  <div class="cmp-questionnaire__inputfields__lastlabel">
+                    <label class="cmp-questionnaire__inputfields__label"
+                      >Last Name</label
+                    >
+                    <input
+                      class="cmp-questionnaire__inputfields__textfield"
+                      type="text"
+                      placeholder="Enter Your Last Name"
+                      id="lname"
+                      name="lname"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="cmp-questionnaire__inputfields">
+                  <div class="cmp-questionnaire__inputfields__firstlabel">
+                    <label class="cmp-questionnaire__inputfields__label">Phone</label>
+                    <input
+                      class="cmp-questionnaire__inputfields__textfield"
+                      type="tel"
+                      placeholder="Enter Phone Number"
+                      name="phNumber"
+                    />
+                  </div>
+                  <div class="cmp-questionnaire__inputfields__lastlabel">
+                    <label class="cmp-questionnaire__inputfields__label">Email</label>
+                    <input
+                      class="cmp-questionnaire__inputfields__textfield"
+                      type="email"
+                      placeholder="Enter Your Email Address"
+                      name="formEmail"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="cmp-questionnaire__inputfields">
+                  <div class="cmp-questionnaire__inputfields__lastlabel">
+                    <label class="cmp-questionnaire__inputfields__label">Message</label>
+                    <div class="cmp-questionnaire__inputfields__comments">
+                      Enter Your Questions or Comments
+                    </div>
+                    <input
+                      class="cmp-questionnaire__inputfields__message"
+                      name="message"
+                    />
+                  </div>
+                </div>
+                <div class="cmp-questionnaire__inputfields__contactsection">
+                  <div class="cmp-questionnaire__inputfields__contact">
+                    <div>
+                      <label class="cmp-questionnaire__inputfields__label"
+                        >Preferred Contact Method</label
+                      >
+                    </div>
+                    <div class="cmp-questionnaire__inputfields__parentcheck"> 
+                      <label class="cmp-questionnaire__inputfields__contact" for="phone">
+                        <input type="checkbox" id="phone" name="phone" value="phone"/>
+                        Phone
+                      </label>
+                      <label class="cmp-questionnaire__inputfields__contact" for="text">
+                        <input type="checkbox" id="text" name="text" value="text" />
+                        Text
+                      </label>
+                      <label class="cmp-questionnaire__inputfields__contact" for="email">
+                        <input type="checkbox" id="email" name="email" value="email" />
+                        Email
+                      </label>
+                  </div> 
+                  </div>
+                  <div>
+                    <button
+                      class="cmp-questionnaire__inputfields__submit"
+                      type="button"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+        </main>
+        <!-- JS ============================== -->
+
+    <!-- inject:js -->
+    <script src="../../js/main.min.js"></script>
+    <!-- endinject -->
+    <!-- / JS ============================ -->
+</body>
+</html>
