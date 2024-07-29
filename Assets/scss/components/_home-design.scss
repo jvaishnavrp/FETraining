@@ -1,82 +1,70 @@
 .home-design{
-    max-height: 100vh;
     display: flex;
     flex-direction: column;
     background-size: cover;
     align-items: center;
+    inline-size: 100%;
 
     &-title{
-        color: $white-smoke;
-        font-size: 40px;
-        margin-top: 50px;
-        margin-left: 105px;
-        margin-right: 105px;
+        color: var(--white-smoke);
+        font-size: toRem(40);
         font-weight: normal;
-
-        @include min-screen(sm) {
-            margin-left: 115px;
-            margin-right: 80px;
-        }
+        padding: toRem(80);
 
         @include min-screen(md) {
-            font-size: 50px;
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 90px;
+            font-size: toRem(45);
         }
 
         @include min-screen(lg) {
-            font-size: 55px;
-            margin-top: 130px;
+            font-size: toRem(55);
         }
 
     }
     &-content{
-        background-color: $white;
+        background-color: var(--white);
         display: flex;
         flex-direction: column;
-        min-height: 145px;
-        min-width: 250px;
-        margin-top: 45px;
-        border-radius: 20px;
-        margin-bottom: 230px;
+        justify-content: space-around;
+        min-block-size: toRem(145);
+        min-inline-size: toRem(250);
+        border-radius: toRem(20);
+        margin-block-end: toRem(100);
+        padding-block: toRem(20);
+
 
         @include min-screen(sm) {
-            min-width: 350px;
-            min-height: 140px;
-            margin-left: 0;
+            min-inline-size: toRem(425);
+            min-block-size: toRem(150);
         }
 
         @include min-screen(md) {
-            min-width: 500px;
+           min-inline-size: toRem(550);
            flex-direction: row;
-           border-radius: 50px;
-           min-height: 90px;
+           border-radius: toRem(50);
+           min-block-size: toRem(100);
         }
 
         @include min-screen(lg) { 
-            min-width: 550px;     
+            min-inline-size: toRem(650);     
         }
 
         &--left{
             display: flex;  
             justify-content: center;
             justify-content: space-evenly;
-            margin-top: 15px;
     
             @include min-screen(md) {  
-                width: 50%;
+                inline-size: 50%;
                 justify-content: space-between;
-                margin-top: 0;
 
                 .design-room:first-child{
-                    margin-left: 35px
+                    margin-inline-start: toRem(35);
                 }
             }
     
             @include min-screen(lg) { 
                 .design-room:last-child{
-                    margin-right: 20px;
+                    margin-inline-end: toRem(20);
                 }
                 
             }
@@ -90,23 +78,23 @@
 
                 &__label{
                     color: $grey;
-                    font-size: 12px;
-                    margin-bottom: 10px;
+                    font-size: toRem(12);
+                    margin-block-end: toRem(10);
                 }
     
                 &-content{
                     display: flex;
                 }
                 &__quantity{    
-                    width: 62px;
-                    font-size: 10px;
+                    inline-size: toRem(62);
+                    font-size: toRem(10);
                     border: none;
-                    border-bottom: 1px solid $wine;
+                    border-block-end: toRem(1) solid var(--wine);
                     text-align: center;
                 }
                 .icons{
-                    height: 22px;
-                    color:  $wine;
+                    block-size: toRem(22);
+                    color:  var(--wine);
                     border: none;
                     background: transparent;
                 }
@@ -116,61 +104,59 @@
         &--right{
             display: flex;  
             justify-content: space-evenly;
-            margin-top: 15px;
 
             .home-design-right-item:last-child{
-                margin-right: 10px;
+                margin-inline-end: toRem(10);
             }
            
     
             @include min-screen(md) {
                 display: flex;  
-                width: 50%;
+                inline-size: 50%;
                 justify-content: space-around;
-                margin-top: 0;;
     
                 .home-design-right-item:last-child{
-                    margin-right: 20px;
+                    margin-inline-end: toRem(20);
                 }
                 .home-design-right-item:first-child{
-                    margin-left: 18px;
+                    margin-inline-end: toRem(18);
                 }
             }
     
             @include min-screen(lg) { 
                 .home-design-right-item:first-child{
-                    margin-left: 10px;
+                    margin-inline-start: toRem(10);
                 }
             }
     
 
 
             .home-design-location{
-                color: $grey;
-                font-size: 12px;
+                color: var(--grey);
+                font-size: toRem(12);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
 
                 .design-room__label{
-                    margin-bottom: 5px;
+                    margin-block-end: toRem(5);
             
                     @include min-screen(md) {
-                        margin-bottom: 10px;
+                        margin-block-end: toRem(10);
                     }
                 }
             }
             .location-list{
-                border-bottom: 1px solid $wine;
+                border-block-end: toRem(1) solid var(--wine);
 
                 .dopdown-up{
-                    color:  $wine;
+                    color:  var(--wine);
                     cursor: pointer;
                     border: none;
                     background: transparent;
                 }
                 .cities{
-                    color: $black;
+                    color: var(--black);
                 }
             }
 
@@ -179,8 +165,8 @@
                 align-items: center;
 
                 .search-icon{
-                    font-size: 35px;
-                    color: $wine;
+                    font-size: toRem(35);
+                    color:  var(--wine);
                     border: none;
                     background: transparent;
                 }

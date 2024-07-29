@@ -4,8 +4,8 @@
 
     &__main-container {
         max-width: 768px;
-        margin: 0 auto;
-        padding: toRem(48) 0;
+        margin-inline: auto;
+        padding-block: toRem(48);
 
         @include min-screen(xl) {
             max-width: 1440px;
@@ -22,7 +22,7 @@
 
             @include min-screen(xl) {
                 width: 25%;
-                padding: 0 toRem(24);
+                padding-inline: toRem(24);
                 text-align: left;
             }
         }
