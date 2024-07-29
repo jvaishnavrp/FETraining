@@ -1,0 +1,246 @@
+.cmp-questionnaire {
+  max-width: toRem(1175);
+  margin: auto;
+
+  @include breakpoint-between(sm, md) {
+    max-width: toRem(1199);
+  }
+
+  &__container {
+    display: flex;
+    background-color: var( --light-grey);
+
+    @include max-screen(sm) {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      background-color: var( --light-grey);
+    }
+
+    @include breakpoint-between(sm, md) {
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    max-width: 50%;
+
+    @include max-screen(sm) {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    @include breakpoint-between(sm, md) {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__form {
+    margin-block-start: toRem(40);
+    margin-inline: toRem(40) toRem(50);
+
+    @include breakpoint-between(sm, md) {
+      margin-inline-end: toRem(100);
+    }
+  }
+
+  &__title {
+    text-align: start;
+    margin-block-end: toRem(30);
+
+    @include breakpoint-between(sm, md) {
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    line-height: 1.32;
+    text-wrap: balance;
+    font-size: toRem(24);
+    font-weight: $font-bold;
+    font-style: normal;
+    color: var(--black);
+
+    @include max-screen(sm) {
+      font-size: toRem(33);
+      font-weight: 400;
+    }
+
+    @include breakpoint-between(sm, md) {
+      text-align: center;
+      font-size: toRem(60);
+      font-weight: 500;
+    }
+  }
+
+  &__content {
+    margin-block-start: toRem(8);
+    line-height: 1.4;
+    text-wrap: balance;
+    font-size: toRem(16);
+    color: $black;
+
+    @include breakpoint-between(sm, md) {
+      text-align: center;
+      font-size: toRem(24);
+      font-weight: 400;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    @include breakpoint-between(sm, md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__inputfields {
+    display: grid;
+    grid-template-columns: repeat(2, toRem(250));
+    column-gap: toRem(25);
+    margin-block: toRem(10);
+
+    @include max-screen(sm) {
+      display: grid;
+      grid-template-columns: toRem(330);
+      row-gap: toRem(20);
+    }
+
+    &__firstlabel {
+      display: grid;
+      grid-template-rows: repeat(2,toRem(30));
+    }
+
+    &__lastlabel {
+      display: grid;
+      grid-template-rows: repeat(2,toRem(30));
+    }
+
+    &__label {
+      font-weight: $font-bold;
+    }
+
+    &__textfield {
+      background-color: var( --light-grey);
+      width: 100%;
+      padding: toRem(12) toRem(20);
+      margin-block: toRem(8);
+      box-sizing: border-box;
+      border: none;
+      border-bottom: toRem(2) solid $black;
+    }
+
+    &__comments {
+      text-wrap: nowrap;
+      font-size: toRem(14);
+    }
+
+    &__message {
+      background-color: var( --light-grey);
+      width: 210%;
+      padding: toRem(12) toRem(20);
+      margin-block: toRem(8);
+      box-sizing: border-box;
+      border: none;
+      border-bottom: toRem(2) solid $black;
+
+      @include max-screen(sm) {
+        width: 100%;
+      }
+    }
+
+    &__contactsection {
+      display: grid;
+      position: relative;
+      top: toRem(6);
+      grid-template-columns: toRem(250) toRem(200);
+
+      @include max-screen(sm) {
+        display: grid;
+        grid-template-columns: toRem(330);
+        row-gap: toRem(24);
+      }
+
+      @include breakpoint-between(sm, md) {
+        position: relative;
+        right: toRem(45);
+      }
+    }
+
+    &__contact {
+      @include max-screen(sm) {
+        margin-inline-end: toRem(20);
+      }
+    }
+
+    &__parentcheck {
+      display: inline-flex;
+    }
+
+    &__contact{
+       
+      margin-inline-end: 10px;
+
+      @include breakpoint-between(sm, md) {
+        margin-inline-end: 20px;
+        cursor: pointer;
+      }
+    }
+
+   &__parentcheck label {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    
+      input[type="checkbox"] {
+        appearance: none;
+        border: 1px solid black;
+        border-radius: 0.25rem;
+        aspect-ratio: 1/1;
+        height: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        overflow: hidden;
+    
+        &:checked {
+          &::after {
+            content: "✓";
+            background-color: $purple;
+            width: -webkit-fill-available;
+          }
+        }
+      }
+    }
+
+    &__submit {
+      background-color: $purple;
+      color: $white;
+      width: toRem(220);
+      height: toRem(46);
+      border-radius: toRem(6);
+      cursor: pointer;
+
+      @include max-screen(sm) {
+        width: toRem(335);
+        cursor: pointer;
+      }
+
+      @include breakpoint-between(sm, md) {
+        position: relative;
+        left: toRem(26);
+        cursor: pointer;
+      }
+    }
+  }
+}
