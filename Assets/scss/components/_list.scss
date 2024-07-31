@@ -20,6 +20,7 @@
         padding-block: toRem(115);
     }
      &-container{
+        max-inline-size: toRem(1280);
         margin-inline: 0;
         @include min-screen(xl) {
             margin-inline: auto;
