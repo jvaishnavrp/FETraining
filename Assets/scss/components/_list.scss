@@ -19,6 +19,12 @@
         padding-inline: toRem(155);
         padding-block: toRem(115);
     }
+     &-container{
+        margin-inline: 0;
+        @include min-screen(xl) {
+            margin-inline: auto;
+        }
+     }
 
     &-head{
         display: flex;
