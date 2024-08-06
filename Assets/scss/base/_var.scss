@@ -95,6 +95,7 @@ $font-normal:normal;
     --gray92: #eeebeb;
     --purple: #800080;
     --megaman: #41c2f5;
+    --grey: #{$grey};
     --black:#{$black};
     --grey:#{$grey};
     --very-pale-shade-gray:#ddd;
@@ -119,6 +120,10 @@ $font-normal:normal;
     --color-greyscale-gray-700: #3A4750;
     --card-bg-color: var(--white);
     --card--title-color: var(--darkestgrey);
+    --list-bg-color: var(--warm-grey);
+    --list-text-color: var(--dark-blue);
+    --list-link-icon-color: var(--persian-red);
+    --list-showhide-icon-color: var(--dark-blue);
 
 }
 

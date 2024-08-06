@@ -180,7 +180,6 @@ $breakpoints: ( // Matched to Bootstrap $grid-breakpoints variables -------- *
     border: none;
     border-bottom: 1px solid $bordercolor;
 }
-
 @mixin button-styles {
     padding-block: toRem(12);
     margin-block: toRem(5);
