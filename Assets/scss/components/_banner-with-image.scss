@@ -1,16 +1,16 @@
 .bannerImage {
     padding: toRem(20);
-
+ 
     @include min-screen(md) {
         height: toRem(500);
         padding: 0;
     }
-
+ 
     &-wrapper {
         background-color: var(--banner-bg-color);
         display: flex;
         flex-direction: column-reverse;
-
+ 
         @include min-screen(md) {
             height: 86%;
             flex-direction: row;
@@ -18,66 +18,66 @@
             align-items: center;
             padding: 4% 12%;
         }
-
+ 
         &__text {
             padding: 6% 40% 6% 6%;
-
+ 
             @include min-screen(md) {
                 padding: 0;
             }
-
+ 
             &-title {
                 padding-block-start: toRem(15);
                 padding-block-end: toRem(5);
                 color: var(--banner-text-color);
                 opacity: 0.7;
                 font-size: toRem(40);
-
+ 
                 @include min-screen(md) {
                     font-size: toRem(45);
                 }
-
+ 
                 @include min-screen(lg) {
                     font-size: toRem(50);
                 }
-
+ 
                 @include min-screen(xl) {
                     font-size: toRem(55);
                 }
             }
-
+ 
             &-smallText {
                 padding-block-end: toRem(20);
                 font-size: toRem(20);
                 color: var(--banner-text-color);
                 opacity: 0.7;
-
+ 
                 @include min-screen(lg) {
                     font-size: toRem(17);
                 }
-
+ 
                 .underline-style {
                     line-height: 1.5;
                     border-bottom: 1px solid;
                 }
             }
        }
-
+ 
        &__image {
             background-color: var(--banner-text-color);
             height: toRem(400);
             width: 100%;
-
+ 
             @include min-screen(md) {
                 width: toRem(285);
                 position: relative;
                 bottom: -70px;
             }
-
+ 
             @include min-screen(lg) {
                 width: toRem(300);
             }
-
+ 
             img {
                 width: 100%;
                 height: 100%;
@@ -85,9 +85,10 @@
             }
        }
     }
-    
+   
     &.light{
         --banner-bg-color: var(--warm-grey);
         --banner-text-color: var(--black);
     }
 }
+ 
