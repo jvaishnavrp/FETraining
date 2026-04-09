@@ -5,6 +5,7 @@ import newFn from './new.js';
 import headerFn from './header.js';
 import successStoriesFn from './success-stories-banner.js';
 import projectLeads from './project-leads.js';
+import bannernorc from './banner-norc.js';
 
 const app = new App();
 
@@ -15,3 +16,4 @@ const newFnComp = newFn();
 const headerComponent = headerFn();
 const successStoriesComponent = successStoriesFn();
 const projectLeadsComponent = projectLeads();
+const bannernorcComp = bannernorc();

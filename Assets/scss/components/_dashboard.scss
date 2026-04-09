@@ -1,0 +1,88 @@
+.profile-banner {
+  background-color: #3c3c3c;
+  padding: 64px 20px;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;        
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  /* LEFT CONTENT */
+  &__content {
+    color: #ffffff;
+    max-width: 600px;
+  }
+
+  &__name {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0 0 16px;
+    line-height: 1.15;
+  }
+
+  &__role {
+    font-size: 20px;
+    margin: 0 0 6px;
+  }
+
+  &__department {
+    font-size: 16px;
+    opacity: 0.85;
+  }
+
+  /* RIGHT IMAGE */
+  &__image {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 320px;
+      height: auto;
+      border-radius: 4px;
+      display: block;
+    }
+  }
+}
+
+/* =====================
+   MOBILE VIEW
+===================== */
+@media (max-width: 767px) {
+  .profile-banner {
+    padding: 40px 16px;
+
+    &__container {
+      flex-direction: column;   // stack vertically
+      text-align: center;
+    }
+
+    &__image {
+      order: 1;                 // image first
+      justify-content: center;
+
+      img {
+        max-width: 280px;
+        width: 100%;
+      }
+    }
+
+    &__content {
+      order: 2;                 // text below image
+      margin-top: 20px;
+    }
+
+    &__name {
+      font-size: 28px;
+    }
+
+    &__role {
+      font-size: 16px;
+    }
+  }
+}
